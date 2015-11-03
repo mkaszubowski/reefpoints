@@ -27,7 +27,7 @@ To give you a taste of some of the examples to come - here are a few of my favor
 ![Dear Data][dear-data]
 *[Dear Data](http://www.dear-data.com/) - Stephanie Posavec and Giorgia Lupi*
 
-Come make with us! If you have any questions about the workshop, please feel free to [email me](ashley.treni@dockyard.com). Hope to see you there!
+Come make with us! If you have any questions about the workshop, please feel free to [email me](mailto:ashley.treni@dockyard.com). Hope to see you there!
 
 
 [so-so-limited]: https://i.imgur.com/Jsk6FWh.jpg
