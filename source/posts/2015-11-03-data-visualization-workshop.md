@@ -18,13 +18,18 @@ Creatives and makers of all types and skill levels are encouraged to come. Durin
 
 To give you a taste of some of the examples to come - here are a few of my favorite data visualizations that create very different experiences. Many more will be included in the pre-workshop presentation about data visualization basics and best practices.
 
-https://i.imgur.com/Jsk6FWh.jpg
+![SoSoLimited][so-so-limited]
 “CSIS data chandelier” - [SoSoLimited](http://www.sosolimited.com/work/csis-data-chandelier/)
 
-https://i.imgur.com/cRZM0lH.png
-“What’s really warming the world?” - [Bloomberg News](http://www.bloomberg.com/graphics/2015-whats-warming-the-world/)
+![Bloomberg][bloomberg]
+“What’s really warming the world?” - [Bloomberg](http://www.bloomberg.com/graphics/2015-whats-warming-the-world/)
 
-https://i.imgur.com/8ZR8Y50.png
-[“Dear Data”](http://www.dear-data.com/) - Stephanie Posavec and Giorgia Lupi
+![Dear Data][dear-data]
+[Dear Data](http://www.dear-data.com/) - Stephanie Posavec and Giorgia Lupi
 
 Come make with us! If you have any questions about the workshop, please feel free to [email me](ashley.treni@dockyard.com). Hope to see you there!
+
+
+[so-so-limited]: https://i.imgur.com/Jsk6FWh.jpg
+[bloomberg]: https://i.imgur.com/cRZM0lH.png
+[dear-data]: https://i.imgur.com/8ZR8Y50.png
