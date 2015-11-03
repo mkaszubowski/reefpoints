@@ -20,8 +20,11 @@ To give you a taste of some of the examples to come - here are a few of my favor
 
 https://i.imgur.com/Jsk6FWh.jpg
 “CSIS data chandelier” - [SoSoLimited (http://www.sosolimited.com/work/csis-data-chandelier/)]
+
 https://i.imgur.com/cRZM0lH.png
 “What’s really warming the world?” - [Bloomberg News (http://www.bloomberg.com/graphics/2015-whats-warming-the-world/)]
+
+https://i.imgur.com/8ZR8Y50.png
 “Dear Data” - [Stephanie Posavec and Giorgia Lupi (http://www.dear-data.com/)]
 
 Come make with us! If you have any questions about the workshop, please feel free to email me at ashley.treni@dockyard.com. Hope to see you there!
