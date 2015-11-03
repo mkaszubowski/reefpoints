@@ -5,9 +5,9 @@ social: true
 author: Ashley Treni
 twitter: "ashleytreni"
 github: atreni
-summary: "our next UX East hands-on workshop"
+summary: "Our next UX East hands-on workshop"
 published: true
-tags: data visualization, user experience design, data visualization methods
+tags: data visualization, user experience
 ---
 
 I’m very excited to host UX East's next workshop on [data visualization](http://www.meetup.com/UX-East/events/226344211/) here at DockYard! I received my Master’s degree earlier this year from Northeastern’s [Information Design and Visualization](http://www.northeastern.edu/camd/artdesign/academic-programs/mfa-in-information-design-and-visualization/) program, and data visualization is one of my favorite things to geek out about. 
