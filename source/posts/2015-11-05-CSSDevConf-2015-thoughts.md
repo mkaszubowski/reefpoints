@@ -21,7 +21,7 @@ The Queen Mary was amazing to stay on throughout the conference and I have to gi
 
 Here are my takeways from the conference!
 
-# Keynote Sara Soueidan
+## Keynote Sara Soueidan
 Twitter: [@SaraSoueidan](https://twitter.com/SaraSoueidan)
 
 Slides: [SVG For Web Designers (and Developers)](http://www.slideshare.net/SaraSoueidan/svg-for-web-designers-and-developers)
@@ -29,7 +29,7 @@ Slides: [SVG For Web Designers (and Developers)](http://www.slideshare.net/SaraS
 - Use SVGs for everything possible and provide fallbacks for browsers that need it
 - Keep in mind you need to look at performance, don’t choose SVGs over performance
 
-## SVG for…
+### SVG for…
 - Icon systems
 - Add banners
 - Infographics
@@ -38,14 +38,14 @@ Slides: [SVG For Web Designers (and Developers)](http://www.slideshare.net/SaraS
 - Filter effects
 - Simple UI shapes
 
-## Future
+### Future
 - CSS Spec custom add SVGs rules coming soon
 
-## Designing SVGs
+### Designing SVGs
 - Every design decision that is made while designing an SVG affects development
 - Developers and Designers need early communication and have some give and take to make both their lives simpler
 
-## Process
+### Process
 - Outline text that has been changed into vectors are not selectable
 - Outline text preserves font-face
 - Use simple shapes over a `<path>`
@@ -57,13 +57,13 @@ Slides: [SVG For Web Designers (and Developers)](http://www.slideshare.net/SaraS
 - Always keep `width` and `height` attributes on the `<svg>`
   - Great for fallback
 
-## Optimize
+### Optimize
 - Most popular tool is SVGO but will change the structure of the SVG, also can break your SVGs :( so use the GUI version with custom options
 - Optimizing your SVG can cut your files size by half
 - Illustrator in the future will have optimize options
 - Sketch has no options yet :(
 
-## Development
+### Development
 - `<symbol>` and `<use>`
   - Multiple `<symbol>` elements being combined into one SVG, always include `<title>` and `description` for accessibility
   - This technique puts the SVGs code in a shadow DOM that is difficult to style
@@ -74,14 +74,14 @@ Slides: [SVG For Web Designers (and Developers)](http://www.slideshare.net/SaraS
 - Use CSS only for simple animations
 - Use JS for complex animations
 
-## SVG over icon fonts
+### SVG over icon fonts
 - Infinite scale and easy styling
 - Browser content blockers will block fonts and not SVGs
 - Tools for switching from icon-fonts to SVG are out there.
 - [Greensock](http://greensock.com/get-started-js) animation library is a go-to
 - `<object>` is most flexible embedding technique for SVG
 
-# Cracking the SVG Code: Brenda Storer
+## Cracking the SVG Code: Brenda Storer
 Twitter: [@brendamarienyc](https://twitter.com/brendamarienyc)
 
 Slides: [Cracking the SVG Code](http://brendastorer.com/presentations/2015-10-CSSDevConf-SVGs/#intro)
@@ -102,7 +102,7 @@ Slides: [Cracking the SVG Code](http://brendastorer.com/presentations/2015-10-CS
 - Transforms on SVG is not 100% supported with your .css file but if you include the transform inline style its 100% supported
 - Checkout [SVG Compressed](http://www.amazon.com/jQuery-Compressed-Jakob-Jenkov-ebook/dp/B006DI6QJ2/ref=asap_bc?ie=UTF8) book online
 
-# Creative Typography with SVG: Brenna O’Brien
+## Creative Typography with SVG: Brenna O’Brien
 Twitter: [@brnnbrn](http://twitter.com/brnnbrn)
 
 Slides: [Creative Typography With SVG](http://talks.brennaobrien.com/svg-typography/#/)
@@ -112,41 +112,41 @@ Slides: [Creative Typography With SVG](http://talks.brennaobrien.com/svg-typogra
 - Text becomes completely responsive when inside a SVG
 - Go on a code adventure with SVG you will find new things
 
-## SVG has a `<text>` element
+### SVG has a `<text>` element
 - `<text>` is accessible!
   - Inherits font-family from `<body>`
   - Use fill to change color
   - `y="0"`is not good, use `y=“1em”`
   - `font-size="80"` is 80px
 
-## `<tspan>`
+### `<tspan>`
 - similar to `<span>`
 - use `x` and `y` for positioning
 
-## Curved text
+### Curved text
 - use `<textPath>` and then link it to a `<path>` that is inside your `<defs>` with a `xlink:href="pathName"`
 
-## Gradients on text
+### Gradients on text
 - `<linearGradient>` in your `<defs>`
 - In your `fill` on the `<text>` use `fill=“url(#grad)”`
 
-## Images on text
+### Images on text
 - Can put your `<image>` inside a `<pattern>` under your `<defs>` and apply the pattern to the fill on your `<text>`
 - You can also fill text with gifs :)
 
-## Knockout text
+### Knockout text
 - Place your `<text>` in a `<mask>` and then apply the mask to your element you want the text to be in as `mask="url(#knockoutText)"`
 
-## Self Typing Text
+### Self Typing Text
 - Use `<animate>` as a child of what element is being animated with `from` and `to` with a `duration`
 
-## Morph Text Glyphs
+### Morph Text Glyphs
 - Convert your text to paths with Illustrator outlines
 
-## Self drawing text
+### Self drawing text
 - `stroke-dasharray` and `stroke-dashoffset` are used to “hack” this effect
 
-# Designing Complex SVG Animations: Sarah Drasner
+## Designing Complex SVG Animations: Sarah Drasner
 Twitter: [@sarah_edo](http://twitter.com/sarah_edo)
 
 Slides: [Designing Complex SVG Animations](http://slides.com/sdrasner/cssdevconf#/)
@@ -163,15 +163,15 @@ Slides: [Designing Complex SVG Animations](http://slides.com/sdrasner/cssdevconf
 - Optimize your SVGs!
 - But don’t overdo the amount of animations you include on your website, simplicity is key
 
-## UI/UX Animation
+### UI/UX Animation
 - This is used to enhance the information on the page
 
-## Context-Shifting
+### Context-Shifting
 - This removes the breakpoints of information being loaded on the page
 - Use animation to fill time while loading to keep the users mind at ease
 - Provide clear focus on what the user should be reading or looking at
 
-## Standalone
+### Standalone
 - Questions to ask
   - Responsive?
   - toggle on/off?
@@ -181,18 +181,18 @@ Slides: [Designing Complex SVG Animations](http://slides.com/sdrasner/cssdevconf
   - You can convey emotion with how you animate elements
 - Animation branding guidelines make communication down the line easy
 
-## Animation performance
+### Animation performance
 - Test everything yourself
 - People expect everything to be faster on the web
 
-## SVG sprites complex to simple
+### SVG sprites complex to simple
 - Design your three steps for desktop, tablet, and mobile
 - Combine elements where you can so you have less SVGs elements you need to hide when going between views
 - Use animation media queries
 - `viewBox` shift with JS
 - provide fallbacks
 
-## Complex animations
+### Complex animations
 - Use JS to make this easy
 - Use [Greensock](http://greensock.com/get-started-js)
 - If you need more then 2-3 chained events in your animation its a good idea to use JS
@@ -201,13 +201,13 @@ Slides: [Designing Complex SVG Animations](http://slides.com/sdrasner/cssdevconf
 - Motion along a path is important for realism
 - Responsive animations should be made with thought as you place the elements in DOM
 
-## Design + Animation + Data
+### Design + Animation + Data
 - Combining these things can bring back the success of static infographics used to have
 - We can make them responsive and interactive with SVG
 - Add accessibility with `<title>` tags
 - Go [CodePen](http://codepen.io/)! Easy to learn new things when you can dive into other peoples code
 
-# The Dark Arts of Light Speed: Henri Helvetica
+## The Dark Arts of Light Speed: Henri Helvetica
 Twitter: [@HenriHelvetica](https://twitter.com/HenriHelvetica)
 
 - Web performance = speed
@@ -221,7 +221,7 @@ Twitter: [@HenriHelvetica](https://twitter.com/HenriHelvetica)
 - `<srcset>` `<picture>` you can use media queries inside them to load images for specific VW
 - Reduce the number of HTTP requests with combining .css files into one and .js files into one
 
-# No Pain No Gain: Stacy Kvernmo
+## No Pain No Gain: Stacy Kvernmo
 Twitter: [@funstacy](https://twitter.com/funstacy)
 
 Slides: [No Pain No Gain](http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw)
@@ -242,14 +242,14 @@ Slides: [No Pain No Gain](http://www.slideshare.net/Funstacy/no-pain-no-gain-css
 - Document your code with comments
 - A pull request should say what you did very clearly
 
-## What to review
+### What to review
 - Follow standards
 - Is the code easy to understand
 - Don’t need to nest everything, don’t go as far as 3-4 levels deep
 - Accessibility
 - Using correct vendor prefixes?
 
-# Keynote Jina Bolton
+## Keynote Jina Bolton
 Twitter: [@jina](https://twitter.com/jina)
 
 Slides: [Designing a Design System](https://speakerdeck.com/jina/designing-a-design-system)
@@ -260,14 +260,14 @@ Slides: [Designing a Design System](https://speakerdeck.com/jina/designing-a-des
 - [designprinciplesftw.com](http://designprinciplesftw.com)
 - Don’t make things until you need it
 
-## v2mom
+### v2mom
 - vision
 - values
 - methods
 - obstacles
 - measures
 
-# Keynote Val Head
+## Keynote Val Head
 Twitter: [@vlh](https://twitter.com/vlh)
 
 Slides: [Designing Meaningful Animation](http://www.slideshare.net/valhead/designing-meaningful-animation)
@@ -277,7 +277,7 @@ Slides: [Designing Meaningful Animation](http://www.slideshare.net/valhead/desig
 - When you have motion across all platforms it provides a more recognizable interface for the user
 - Be subtle with movements, a little will go a long way
 
-# CSS Architecture: Jonathan Snook
+## CSS Architecture: Jonathan Snook
 Twitter: [@snookca](https://twitter.com/snookca)
 
 Slides: Coming soon
@@ -291,30 +291,30 @@ Slides: Coming soon
 - Every peace of design ends up in code
 - You can use emojis as class names :P
 
-## Categorization of styles
+### Categorization of styles
 - state
 - Theme
 - module
 - layout
 - base
 
-## Naming conventions
+### Naming conventions
 - Use them!
 - [SMACSS](https://smacss.com/)
 - [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 - The goal is to isolate an element from everything else on the page
 
-## Create Standards For Your CSS
+### Create Standards For Your CSS
 - Without standards and code reviewing, CSS will get out of control
 - [Styleguides.io](http://styleguides.io) is a great resource
 
-## Future
+### Future
 - Web components
 - Composable UIs
 - Communicate!
 
 
-# Bower Power! Supercharging Front-End Manageability: Eric Carlisle
+## Bower Power! Supercharging Front-End Manageability: Eric Carlisle
 Twitter: [@eric_carlisle](https://twitter.com/eric_carlisle)
 
 Slides: [Bower Power! Supercharging Front-End Manageability](http://www.slideshare.net/ericcarlisle/bower-power-54549427)
@@ -324,28 +324,28 @@ Slides: [Bower Power! Supercharging Front-End Manageability](http://www.slidesha
 - Better products, process, reduce cost
 - Don’t be afraid to use npm and bower
 
-## Bower keeps it simple
+### Bower keeps it simple
 - Maintains a dependency manifest
 - Fetches them when you need it
 - Tracks dependencies
 - Integrates with everything
 
-## You need
+### You need
 - Node.js Javascript runtime
 - npm, Node.js package manager
 - git, version control
 
-## Starting the awesome
+### Starting the awesome
 - `npm install -g bower`
 - `bower init`
 
-## Installing dependencies
+### Installing dependencies
 - `bower install dependenciesName`
 - add a `--save` after install to save that dependency for the project
 - add a `--save-dev` after install to save that dependency for development or debugging
 - Add `bower_components` to `.gitignore`!!
 
-# Fight the Zombie Pattern Library: Marcelo Somers
+## Fight the Zombie Pattern Library: Marcelo Somers
 Twitter: [@marcelosomers](https://twitter.com/marcelosomers)
 
 Slides: [Fight the Zombie Pattern Library](https://speakerdeck.com/marcelosomers/fight-the-zombie-pattern-library-css-dev-conf-2015)
@@ -360,7 +360,7 @@ Slides: [Fight the Zombie Pattern Library](https://speakerdeck.com/marcelosomers
 - This reduces tweaking static comps to make one small change but rather make one change to an item in a library
 - You want an automated library or a team managing your libraries
 
-## Get started today
+### Get started today
 - Take an inventory
 - Take documentation
   - Base styles
@@ -375,12 +375,12 @@ Slides: [Fight the Zombie Pattern Library](https://speakerdeck.com/marcelosomers
 - Open source culture
   - [opencss.klamp.in](http://opencss.klamp.in)
 
-## Pattern Library Tools
+### Pattern Library Tools
 - Writing CSS documentation with [KSS](http://warpspire.com/kss/)
   - will auto document comments in your `.css` file
 - Pattern lab on GitHub
 
-### The better way
+#### The better way
 - [patternpack](https://github.com/patternpack/patternpack)
   - what it does
     - Build your static site
@@ -399,7 +399,7 @@ Slides: [Fight the Zombie Pattern Library](https://speakerdeck.com/marcelosomers
     - `grunt pattern pack:release`
     - `git push —follow-tags`
 
-# Web Components and the Future of Modular CSS: Philip Walton
+## Web Components and the Future of Modular CSS: Philip Walton
 Twitter: [@philwalton](https://twitter.com/philwalton)
 
 Slides: [Web Components And the future of Modular CSS](https://philipwalton.github.io/talks/2015-10-26/#1)
@@ -407,11 +407,11 @@ Slides: [Web Components And the future of Modular CSS](https://philipwalton.gith
 - Good news is that web components were primarily a google effort but not all vendors are on board but could be available sometime in 2016
 - Your selectors are the biggest determining factor in how scalable your code is
 
-## Whats changed?
+### Whats changed?
 - Multiple shadow roots have gone away
 - `createShadowRoot()` is now `attachShadow(mode)`
 
-## CSS is hard
+### CSS is hard
 - Manage global names
 - Scoping/isolating styles
 - Specificity conflicts
@@ -419,14 +419,14 @@ Slides: [Web Components And the future of Modular CSS](https://philipwalton.gith
 - Managing styles dependencies
 - Removing unused code
 
-## What is CSS missing
+### What is CSS missing
 - Scope or isolate styles to a particular set of DOM nodes
 - Ability to abstract away implementation details
 - Goooo Web components! They do this
 - You don’t want to have to depend on tools that everyone has to learn
 - No ecosystems
 
-## The Anatomy of a Web Component
+### The Anatomy of a Web Component
 - Elements in a shadow DOM
   - Its a subtree of a DOM node that can’t be styled by CSS
   - Shadow nodes are private
@@ -434,7 +434,7 @@ Slides: [Web Components And the future of Modular CSS](https://philipwalton.gith
 - HTMl imports
 - The template element
 
-# Keynote Dave Rupert
+## Keynote Dave Rupert
 Twitter: [@davatron5000](https://twitter.com/davatron5000)
 
 Slides: [The Art Of Being Wrong](https://speakerdeck.com/davatron5000/the-art-of-being-wrong)
