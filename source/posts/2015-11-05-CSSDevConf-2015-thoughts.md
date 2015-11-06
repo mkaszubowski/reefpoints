@@ -210,6 +210,8 @@ Slides: [Designing Complex SVG Animations](http://slides.com/sdrasner/cssdevconf
 ## The Dark Arts of Light Speed: Henri Helvetica
 Twitter: [@HenriHelvetica](https://twitter.com/HenriHelvetica)
 
+Slides: [The Dark Arts of Light Speed](http://www.slideshare.net/HenriHelvetica/?mc_cid=cf53aad878&mc_eid=60d40ffbe3)
+
 - Web performance = speed
 - Font-end development suffers from the embarrassment of riches
 - 57% of visiters will abandon a page after 3 seconds of not loading
@@ -280,7 +282,7 @@ Slides: [Designing Meaningful Animation](http://www.slideshare.net/valhead/desig
 ## CSS Architecture: Jonathan Snook
 Twitter: [@snookca](https://twitter.com/snookca)
 
-Slides: Coming soon
+Slides: [CSS Architecture](http://environmentsforhumans.com/2015/css-dev-conf/presentations/Snook-CSSDevConf2015-CSSArchitecture.pdf?mc_cid=cf53aad878&mc_eid=60d40ffbe3)
 
 - Build modular systems
 - INLINE STYLES WON'T SAVE YOU FROM INHERITANCE
