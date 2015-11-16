@@ -1,0 +1,330 @@
+---
+layout: post
+title: "Ember Best Practices: Functional Programming and the Observer Effect"
+social: true
+author: Lauren Tan
+twitter: "sugarpirate_"
+github: poteto
+published: true
+tags: ember, javascript, best practices
+summary: "Don't use observers."
+ember_start_version: 1.13
+---
+
+My awesome colleagues have written about patterns and [best practices][bestpractices] we use at DockYard, covering everything from the [Ember][brian] [Object][estelle] [model][romina] and [better acceptance tests][lin], to [native inputs][aaron] and [closure actions][dan]. 
+
+Today, I'd like to write about something that is close to all our hearts – <span title="Every time you use an observer, Stefan Penner dies a little inside.">observers</span>; and a topic I think about a lot – functional programming (FP). I'd like to take you through a tour of refactoring away from observers in your application and freeing yourself from the shackles of the "observer effect". Let's get started!
+
+## Side effects wreck projects
+
+In science, the term ["observer effect"][ooeffect] refers to the changes that are effected on some phenomenon simply by observing it. This is often because of instruments that alter the state of what they observe in some manner.
+
+Sound familiar? Funnily enough, the same effect can probably be found in your Ember application if you use observers. For reasons we'll cover in this post, [observers are an anti-pattern][stef] and should be avoided, as it makes it difficult to reason about and to debug your application.
+
+## Difficult to reason about? ¯\\\_(ツ)\_/¯
+
+"Difficult to reason about" is a term that is commonly thrown around – but what exactly does it mean? Informally, it means being able to tell what a program will do just by looking at its code. That is, running the program _should not_ lead to unexpected surprises. We strive to make our applications easy to reason about because it leads to more maintainable code that is easier to debug and test.
+
+> That is, running the program should not lead to unexpected surprises.
+ 
+Since JavaScript isn't a purely functional language, it does not enforce immutability by default. Its mutable data structures can sometimes lead to surprising and unintuitive results (making some JavaScript applications difficult to reason about), so various attempts have been made to introduce immutability to the language. 
+
+For example, [ClojureScript][clojurescript] and [Elm][elm] are functional languages that compile down to JavaScript. [Mori][mori] and [immutable.js][immutable] are also excellent libraries that provide immutable data structures you can use in vanilla JavaScript. These tools bring in bits of FP philosophy into JavaScript applications, and have become increasingly popular in front-end development thanks to the introduction of [React][react] and the [Flux pattern][flux].
+
+## The "rise" of FP in front end development
+
+FP is not a new programming paradigm – it's been around for a while since the introduction of LISP in the late 50s. However, it's only in recent times that we've seen FP languages become more mainstream, most notably with [Elixir][elixir], which combines the elegance and productivity of Ruby with the performance of the Erlang VM.
+
+> The combination of Ember's conventions (over configuration), Glimmer, and DDAU means that just like Elixir, Ember developers too can find the sweet spot of having both productivity and performance.
+
+Why is [FP useful][fpben] for building front end applications? React taught us that it is surprisingly cheap to diff the changes on the DOM, and to perform a series of updates to sync the DOM with its virtual representation. In other words, React made its `render` function a pure one (one of the core principles of FP) – you always get the same output (HTML) for a given input (state). 
+
+With the Flux pattern, that is taken a step further and the entire application is treated as a pure function – for a given serialized state, we can predictably render the same output each time. This has allowed Flux implementations like [Redux][redux] the ability to have a ["time traveling debugger"][timetravel], which is only possible when you model your architecture with a FP paradigm.
+
+### Observables are not the answer
+
+These philosophies have had resounding success, so much so that `ಠbject.ಠbserve` was [withdrawn][oo] from TC39. All this means is that Observables are no longer the best way of building web applications, and Ember in general is moving in that direction with its "Data Down, Actions Up" (DDAU) philosophy. 
+
+In 1.13.x, [Glimmer][glimmer] landed – it is Ember's new rendering engine based on the same pure render semantics, and gives us fast, idempotent re-renders. The combination of Ember's conventions (over configuration), Glimmer, and DDAU means that just like Elixir, Ember developers too can find the sweet spot of having both productivity and performance.
+
+## Data Down, Actions Up
+
+Although you could bring in immutable data structures into your application (a topic for a future post!), that alone wouldn't be enough. We should also strive to make our business logic as pure (free of side effects) as possible. Of course, it wouldn't be possible to make _everything_ pure, as web applications inherently involve mutation (i.e. updating a user record), but it is beneficial to explicitly know and isolate the functions in your app that do have side effects.
+
+In Ember 2.x, the best way forward is "Data Down, Actions Up". This means:
+
+1. One way bindings by default
+1. Explicit closure actions over side effects
+1. Components should not mutate data directly
+
+My colleagues have already written about [one way bindings][aaron], [closure actions][dan] and [not mutating data in Components][marin], so I will leave you to do further reading in your own time.
+
+Instead, let's continue the discussion above on how best to refactor away observers in your application, so that we can eliminate or reduce side effects.
+
+## Refactoring away observers
+
+Let's say we have an observer in our application that needs to check a user's birthday [(demo)][jsbin]:
+
+```js
+// birth-day/component.js
+import Ember from 'ember';
+import moment from 'moment';
+
+const { 
+  Component, 
+  computed,
+  get, 
+  set
+} = Ember;
+
+export default Component.extend({
+  isBirthday: false,
+  birthDate: null,
+  
+  age: computed('birthDate', {
+    get() {
+      return moment().diff(moment(get(this, 'birthDate')), 'years');
+    }
+  }),
+
+  checkBirthday() {
+    let today = moment();
+    let birthDate = moment(get(this, 'birthDate'));
+    let isBirthday = (today.month() === birthDate.month()) && 
+      (today.day() === birthDate.day());
+
+    set(this, 'isBirthday', isBirthday);
+  },
+
+  init() {
+    this._super(...arguments);
+    this.addObserver('birthDate', this, this.checkBirthday);
+  },
+
+  willDestroy() {
+    this.removeObserver('birthDate', this, this.checkBirthday);
+  }
+});
+```
+
+In the above example, we're using an observer to set the `isBirthday` flag if it is the user's birthday.
+
+```hbs
+{{!birth-day/template.hbs}} 
+{{input value=birthDate placeholder="Your birthday"}}
+
+<p>
+  You are currently {{age}} years old.
+  {{#if isBirthday}}
+    Happy birthday!
+  {{/if}}
+</p>
+```
+
+When you find yourself setting some value (be in on the component, record or somewhere else), you can easily refactor away the observer.
+
+### Removing an observer that sets a value on the component
+
+In this scenario, you can simply replace the observer with a CP. 
+
+```js
+// birth-day/component.js
+import Ember from 'ember';
+import moment from 'moment';
+
+const { 
+  Component, 
+  computed,
+  get
+} = Ember;
+
+export default Component.extend({
+  // ...
+  isBirthday: computed('birthDate', {
+    get() {
+      let today = moment();
+      let birthDate = moment(get(this, 'birthDate'));
+
+      return (today.month() === birthDate.month()) && 
+        (today.day() === birthDate.day());
+    }
+  })
+});
+```
+
+### Using component lifecycle hooks
+
+We could also move the `input` logic out of this component, and use the [new component lifecycle hooks][hooks] to set the `isBirthday` flag on the component.
+
+```js
+// birth-day/component.js
+import Ember from 'ember';
+import moment from 'moment';
+
+const { 
+  Component, 
+  computed,
+  get
+} = Ember;
+
+export default Component.extend({
+  birthDate: null,
+  today: null,
+  isBirthday: false,
+  
+  didReceiveAttrs() {
+    let isBirthday = this.checkBirthday(
+      moment(get(this, 'today')), 
+      moment(get(this, 'birthDate'))
+    );
+
+    set(this, 'isBirthday', isBirthday);
+  },
+
+  checkBirthday(today, birthDate)
+    return (today.month() === birthDate.month()) && 
+      (today.day() === birthDate.day());
+  })
+});
+```
+
+```hbs
+{{!index/template.hbs}} 
+{{one-way-input 
+    value=user.birthDate 
+    update=(action (mut user.birthDate)) 
+    placeholder="Your birthday"
+}}
+{{happy-birthday today=today birthDate=user.birthDate}}
+```
+
+```hbs
+{{!birth-day/template.hbs}} 
+<p>
+  You are currently {{age}} years old.
+  {{#if isBirthday}}
+    Happy birthday!
+  {{/if}}
+</p>
+```
+
+Both approaches let you remove the observer, but the `didReceiveAttrs` example is slightly more explicit, and transforms the component into a pure one. By limiting the scope of the component, we can easily isolate the origins of data mutations. 
+
+### Removing an observer that sets a value outside the component
+
+In this situation, let's say we want to update the user record's `isBirthday` flag instead. We can remove the observer by using one way input actions:
+
+By bringing in the [`ember-one-way-input`][oneway] addon, we can eliminate the coupling of the component to the user record:
+
+```js
+// birth-day/component.js
+import Ember from 'ember';
+import moment from 'moment';
+
+const { 
+  Component, 
+  computed,
+  get
+} = Ember;
+
+export default Component.extend({
+  // ...
+  actions: {
+    checkBirthday(birthDate) {
+      birthDate = moment(birthDate);
+      let today = moment();
+      let isBirthday = (today.month() === birthDate.month()) && 
+        (today.day() === birthDate.day());
+      
+      this.attrs.setIsBirthday(isBirthday);
+      this.attrs.setBirthDate(birthDate.toDate());
+    }
+  }
+});
+```
+
+```hbs
+{{!birth-day/template.hbs}} 
+{{one-way-input 
+    value=user.birthDate 
+    update=(action "checkBirthday") 
+    placeholder="Your birthday"
+}}
+
+<p>
+  You are currently {{age}} years old.
+  {{#if isBirthday}}
+    Happy birthday!
+  {{/if}}
+</p>
+```
+
+And then in the Controller:
+
+```js
+// index/controller.js
+import Ember from 'ember';
+
+const { Controller, set } = Ember;
+
+export default Controller.extend({
+  actions: {
+    setIsBirthday(isBirthday) {
+      set(this, 'user.isBirthday', isBirthday);
+      user.save();
+    },
+
+    setBirthDate(birthDate) {
+      set(this, 'user.birthDate', birthDate);
+      user.save();
+    }
+  }
+});
+```
+
+```hbs
+{{!index/template.hbs}} 
+{{happy-birthday 
+    setIsBirthday=(action "setIsBirthday") 
+    setBirthdate=(action "setBirthdate")
+    isBirthday=user.isBirthday
+}}
+```
+
+In the above example, we moved the logic for setting the `isBirthday` flag out of the `happy-birthday` component into its Controller. The component no longer needs to directly mutate state (an anti-pattern would be to set `user.isBirthday` directly in the component), and can instead send a closure action up, leaving the Controller to decide how to handle the actions. Data now flows down to the Component, and any changes to the `input` sends actions back up.
+
+## Who should use observers?
+
+No one.
+
+If observers are so terrible, why are they in Ember? According to [Stefan Penner][steftweet], observers are used by the framework itself as a low level primitive, so that _you don't need to use them yourself_. So unless you're working on a PR for Ember.js, stay away from observers. 
+
+I hope you've enjoyed this post – next week, stay tuned for [Doug][doug]'s post on more Ember 2.x best practices!
+
+[aaron]: https://dockyard.com/blog/2015/10/05/ember-best-practices-using-native-input-elements
+[bestpractices]: https://dockyard.com/blog/categories/best-practices
+[brian]: https://dockyard.com/blog/2015/10/19/2015-dont-dont-override-init
+[clojurescript]: https://github.com/clojure/clojurescript
+[dan]: https://dockyard.com/blog/2015/10/29/ember-best-practice-stop-bubbling-and-use-closure-actions
+[doug]: https://twitter.com/dougyun
+[elixir]: http://elixir-lang.org/
+[elm]: http://elm-lang.org/
+[estelle]: https://dockyard.com/blog/2015/09/18/ember-best-practices-avoid-leaking-state-into-factories
+[flux]: https://facebook.github.io/flux/docs/overview.html#content
+[fpben]: https://www.youtube.com/watch?v=aeh5Fmh_tmw
+[hooks]: https://github.com/emberjs/ember.js/pull/11127
+[glimmer]: https://www.youtube.com/watch?v=o12-90Dm-Qs
+[immutable]: https://facebook.github.io/immutable-js/
+[jsbin]: http://emberjs.jsbin.com/citiwi/edit?js,output
+[lin]: https://dockyard.com/blog/2015/09/25/ember-best-practices-acceptance-tests
+[marin]: https://dockyard.com/blog/2015/10/14/best-practices-data-down-actions-up
+[mori]: https://swannodette.github.io/mori/
+[oneway]: https://github.com/dockyard/ember-one-way-input
+[oo]: https://mail.mozilla.org/pipermail/es-discuss/2015-November/044684.html
+[ooeffect]: https://en.wikipedia.org/wiki/Observer_effect_(physics)
+[react]: https://facebook.github.io/react/
+[redux]: http://redux.js.org/
+[romina]: https://dockyard.com/blog/2015/11/09/best-practices-extend-or-mixin
+[stef]: https://www.youtube.com/watch?v=7PUX27RKCq0
+[steftweet]: https://twitter.com/stefanpenner/status/576511209278582784
+[timetravel]: https://www.youtube.com/watch?v=xsSnOQynTHs
