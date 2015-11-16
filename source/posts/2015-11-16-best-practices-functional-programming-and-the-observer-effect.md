@@ -41,9 +41,9 @@ Why is [FP useful][fpben] for building front end applications? React taught us t
 
 With the Flux pattern, that is taken a step further and the entire application is treated as a pure function – for a given serialized state, we can predictably render the same output each time. This has allowed Flux implementations like [Redux][redux] the ability to have a ["time traveling debugger"][timetravel], which is only possible when you model your architecture with a FP paradigm.
 
-### Observables are not the answer
+### Object.observe is not the answer
 
-These philosophies have had resounding success, so much so that `ಠbject.ಠbserve` was [withdrawn][oo] from TC39. All this means is that Observables are no longer the best way of building web applications, and Ember in general is moving in that direction with its "Data Down, Actions Up" (DDAU) philosophy. 
+These philosophies have had resounding success, so much so that `Object.observe` was [withdrawn][oo] from TC39. All this means is that _observing property changes_ are no longer the best way of building web applications, and Ember in general is moving in that direction with its "Data Down, Actions Up" (DDAU) philosophy. 
 
 In 1.13.x, [Glimmer][glimmer] landed – it is Ember's new rendering engine based on the same pure render semantics, and gives us fast, idempotent re-renders. The combination of Ember's conventions (over configuration), Glimmer, and DDAU means that just like Elixir, Ember developers too can find the sweet spot of having both productivity and performance.
 
