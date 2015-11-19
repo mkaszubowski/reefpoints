@@ -11,7 +11,9 @@ tags: phoenix, rails, elixir, ruby
 ---
 
 In his yearly recap last December, Brian went public with his [plans to transition the company over to Elixir and Phoenix development](https://dockyard.com/blog/2014/12/28/lessons-learned-three-years-running-a-software-consultancy). Throughout this year, he found it was a smooth transition for the team [going from primarily Rails to Phoenix powered applications](https://dockyard.com/blog/2015/10/29/how-long-it-took-our-team-to-move-from-rails-to-phoenix).
-On the surface, Phoenix shares some familiar conventions with Rails that lets folks jump into new applications and contribute early to a project – on their way to greater mastery. Complete mastery will take a bit more practice than knowing a few shared conventions, but the similar-at-a-glance features has enticed Ruby teams to get involved and many are delighted to get up and running quickly. Unfortunately, it has also led to wrong assumptions about Phoenix's likeness to Rails, causing some to miss the important differences around their core philosophies. This post aims to address the few similarities Phoenix shares with Rails, how much they differ, and why it matters.
+On the surface, Phoenix shares some familiar conventions with Rails that lets folks jump into new applications and contribute early to a project – on their way to greater mastery. Complete mastery will take a bit more practice than knowing a few shared conventions, but the similar-at-a-glance features has enticed Ruby teams to get involved and many are delighted to get up and running quickly. Unfortunately, it has also led to wrong assumptions about Phoenix's likeness to Rails, causing some to miss the important differences around their core philosophies.
+
+It is common in the Ruby community to say that there are Rails developers and Ruby developers. We don't expect this to happen with Phoenix. Although Phoenix of course introduces its own abstractions, ultimately writing a Phoenix application is writing an Elixir application. Testing Phoenix code is testing Elixir functions. This post aims to address these ideas by comparing the similartieis and differences between Phoenix and Rails and why it matters.
 
 ## Similarities
 
@@ -37,19 +39,39 @@ There is no such thing as a "Phoenix application". Your Phoenix projects are fir
 
 #### Why it matters: no singletons
 
-In Rails there is a single application that's accessible via `Rails.application`. Rails runs the show, from starting the application, configuration, and even running command line tasks. As an inherent limitation of this approach, you cannot run two Rails applications side by side. If you need sharing, you need to carefully break it apart into engines and a learn a new set of rules.
+In Rails there is a single application that's accessible via `Rails.application`. Rails runs the show, from starting the application, configuration, and even running command line tasks. As an inherent limitation of this approach, you cannot run two Rails applications side by side. If you need sharing, you need to carefully break it apart into engines and learn a new set of rules.
 
 With Phoenix, nothing is global. There is no monolith. A new Phoenix application will include one Endpoint, one Router, and one PubSub Server, but you are free to add more. With no global state or global servers, you can break your application into pieces as your infrastructure grows.
 
 #### Why it matters: startup and shutdown
 
-Elixir conventions structures your projects as small composes "applications" that can be started and stopped as a unit. The trail usually goes like this (using Phoenix itself as an example):
+Elixir conventions structures your projects as small composable "applications" that can be started and stopped as a unit. The trail usually goes like this (using Phoenix itself as an example):
 
-1. Every application has a specification, that may specify which module to invoke when the application will be initialized [example](https://github.com/phoenixframework/phoenix/blob/master/mix.exs#L28-L38)
+1. Every application has a specification, that may specify which module to invoke when the application will be initialized:
 
-2. If a module is specified, the `start/2` function of this module is invoked [example](https://github.com/phoenixframework/phoenix/blob/master/lib/phoenix.ex#L30)
+  ```elixir
+  def application do
+    [mod: {Phoenix, []},
+     applications: [:plug, :poison, :logger, :eex],
+    ...]
+  end
+  ```
+[source](https://github.com/phoenixframework/phoenix/blob/9f9c4663b304a3ff885cc8356cad278e100eb499/mix.exs#L28-L38)
 
-3. The `start/2` function must return the identifier of a supervised process [example](https://github.com/phoenixframework/phoenix/blob/master/lib/phoenix.ex#L41)
+2. If a module is specified, the `start/2` function of this module is invoked 
+
+  ```elixir
+  defmodule Phoenix do
+    def start(_type, _args) do
+      ...
+      Phoenix.Supervisor.start_link
+    end
+  end
+  ```
+  [source](https://github.com/phoenixframework/phoenix/blob/7692aef141f6eab5ad9a0e88875f42c8b02b117d/lib/phoenix.ex#L3  0)
+
+3. The `start/2` function must return the identifier of a supervised process, such as ` Phoenix.Supervisor.start_link` above
+  [source](https://github.com/phoenixframework/phoenix/blob/7692aef141f6eab5ad9a0e88875f42c8b02b117d/lib/phoenix.ex#L41)
 
 A similar flow happens when stopping your application. The consequence is that it doesn't matter if you are using Phoenix or not, every application has its own and contained start/stop mechanism.
 
@@ -70,7 +92,7 @@ By relying on applications, you gain supervision, fault tolerance, and introspec
 
 ![Imgur](http://i.imgur.com/SehijaI.png)
 
-The beauty is, your project will start as a single application and it may (or may not) be broken into multiple applications naturally, be they all running in a single node or in a service oriented architecture. We pay no upfront cost because the runtime is built on tried and true patterns. In fact, we will cover such an example in an upcoming chapter of the Programming Phoenix book.
+The beauty is, your project will start as a single application and it may (or may not) be broken into multiple applications naturally, be they all running in a single node or in a service oriented architecture. We pay no upfront cost because the runtime is built on tried and true patterns. In fact, we will cover such an example in an upcoming chapter of the [Programming Phoenix book](https://pragprog.com/book/phoenix/programming-phoenix).
 
 
 
@@ -86,7 +108,7 @@ Let's compare two very similar looking controllers to see how Phoenix's function
 
 controller.rb:
 
-```elixir
+```ruby
 def show do
   @user = User.find(params[:id])
 end
@@ -100,7 +122,8 @@ def show(conn, %{"id" => id}) do
 end
 ```
 
-Unless you're a seasoned Rails developer, you wouldn't know that `show` calls `render "index.html"` implicitly. Even if it was called explicitly, you would have to know that all instance variables are copied from the controller instance to the view instance, which is a layer of complexity that few realize when first getting into Rails development. Beyond that, as a programmer you must be aware of all the implicit state of the instance, such as the `params` hash, and the `request` object. In Phoenix, everything is explicit. The `conn` is our bag of data and line of communication with the webserver. We pass it along through a pipeline of functions called plugs, transforming the connection, and sending response(s) as needed.
+Unless you're a seasoned Rails developer, you wouldn't know that `show` calls `render "show.html"` implicitly. Even if it was called explicitly, you would have to know that all instance variables are copied from the controller instance to the view instance, which is a layer of complexity that few realize when first getting into Rails development. Convention over configuration is a Good Thing, but there's a threshold where implicit behavior sacrifices clarity. Phoenix optimizes for clarity, in a way that we think strikes a perfect balance with easy to use APIs
+Beyond that, as an Object Oriented programmer you must be aware of all the implicit state of the instance, such as the `params` hash, and the `request` object. In Phoenix, everything is explicit. The `conn` is our bag of data and line of communication with the webserver. We pass it along through a pipeline of functions called plugs, transforming the connection, and sending response(s) as needed.
 
 #### Why it matters: easy to test
 
@@ -168,7 +191,7 @@ Phoenix from day one was built to take on the challenges of the modern, highly c
 
 #### Why it matters: the web is evolving
 
-Phoenix Channels target the Web beyond the browser. The web is evolving to include *connected devices*, one of which is a browser. We need a framework that can evolve with changing and new protocols alike. That's why Channels are transport agnostic, with native channel clients available on iOS, Android, and Windows platforms.
+Phoenix Channels target the Web beyond the browser. The web is evolving to include *connected devices* (phones, watches, smart toasters) – one of which is a browser. We need a framework that can evolve with changing and new protocols alike. That's why Channels are transport agnostic, with native channel clients available on iOS, Android, and Windows platforms. You can see this in action with a [Phoenix chat app running natively on a browser, iPhone, and Apple Watch](https://vimeo.com/136679715).
 
 #### Why it matters: fast performance, with less dependencies
 
@@ -181,18 +204,20 @@ Phoenix does not impose strict naming conventions, like we see in Rails.
 
 #### Why it matters: easy to learn
 
-Phoenix does not tie module names to the filename. Rails requires a `UsersController` to be located in a file named `users_controller.rb`. Phoenix does not care. There is a "web" directory where you put controllers, views, etc, but it only exists for code reloading purposes which gives you refresh-driven-development.
+Phoenix does not tie module names to the filename. Rails requires a `UsersController` to be located in a file named `users_controller.rb`. We agree conventions like these are good, but Phoenix does not care about such tight restrictions. Instead we promote sane defaults, but are flexible to individual requirements. Naming also creates a lot of confusion for people who learn Rails first then try to write Ruby applications. Because Rails depends on `const_missing` to require files based upon the class name convention of file path, knowing how to require files in a regular Ruby application is a bit of a mystery for programmers looking to move their knowledge outside of Rails.
+
+Phoenix includes a "web" directory where you put controllers, views, etc, but it only exists for code reloading purposes which gives you refresh-driven-development.
 
 Phoenix also does not impose singular and plural naming rules. Rails naming rules can confuse beginners and advanced developers alike: models use singular names, controllers use plural ones, URL helpers mix both, and so on. Phoenix consistently uses singular rules, as any other Elixir code. You may use plural names for your tables and router paths, but those are explicitly written at your system boundaries.
 
 
 ### Assets
 
-Phoenix uses a tool named [brunch]() by default for handling static assets, but it allows you to bring your own JavaScript build tool, instead of building one specific to the framework, like Rails does with the asset pipeline. Phoenix also leverages its channel layer to provide live-reload of changes out of the box.
+Phoenix uses a tool named [brunch](http://brunch.io) by default for handling static assets, but it allows you to bring your own JavaScript build tool, instead of building one specific to the framework, like Rails does with the asset pipeline. Phoenix also leverages its channel layer to provide live-reload of changes out of the box.
 
 #### Why it matters: ES6/ES2015 is the future
 
-Phoenix promotes ES6/ES2015 instead of CoffeeScript, by supporting ES2015 out of the box for new projects. CoffeeScript served its noble purpose to push the industry forward. ES2015 and its first-class transpilers are the clear way forward.
+Phoenix promotes ES6/ES2015 instead of CoffeeScript, by supporting ES2015 out of the box for new projects. CoffeeScript served its noble purpose to push the industry forward. ES2015 and its [first-class transpilers](https://babeljs.io) are the clear way forward.
 
 #### Why it matters: live-reload is an essential feature
 
@@ -201,4 +226,4 @@ Phoenix ships with live reload out of the box. As soon as you change a .js or .c
 
 ## Wrap-up
 
-It is common in the Ruby community to say that there are Rails developers and Ruby developers. We don't expect this to happen with Phoenix. Although Phoenix of course introduces its own abstractions, ultimately writing a Phoenix application is writing an Elixir application. Testing Phoenix code is testing Elixir functions. Regardless of your background, you'll find Phoenix borrows from great ideas that came before it, while using Elixir to carve its own path to take on the modern web.
+Regardless of your background, you'll find Phoenix borrows from great ideas that came before it, while using Elixir to carve its own path to take on the modern web.
