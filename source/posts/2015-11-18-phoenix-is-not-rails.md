@@ -104,26 +104,56 @@ Phoenix provides fantastic performance out of the box, [with benchmarks](https:/
 
 Explicit > Implicit. Almost Always. Phoenix favors explicitness in most of its stack. For example, when generating your Phoenix application, you can see all the "plugs" your request goes through in `lib/my_app/endpoint.ex`. Where Rails segregates Rack middleware to a side-loaded part of the application, Phoenix makes all plugs explicit. You have an instant, at-a-glance look into your request life-cycle by viewing the plugs in your endpoint and router.
 
+```elixir
+defmodule MyApp.Endpoint do
+  use Phoenix.Endpoint, otp_app: :my_app
+
+  socket "/socket", MyApp.UserSocket
+  plug Plug.Static, at: "/", from: :my_app, gzip: false, only: ~w(css images js)
+  plug Plug.RequestId
+  plug Plug.Logger
+  plug Plug.Parsers, parsers: [:urlencoded, :multipart, :json], pass: ["*/*"]
+  plug Plug.MethodOverride
+  plug Plug.Head
+  plug Plug.Session, store: :cookie
+  plug MyApp.Router
+end
+```
+
+A request starts in your Endpoint, flows through the explicit plug "base middleware", and is handed off to your Router, which itself is just a plug. Then the router applies its own plugs before handing off to a controller, which is (you guessed it!), a Plug. A single level of abstraction throughout the entire stack makes reasoning about your request life-cycle as clear as possible. It also allows easy third-party package integration because of the simplicity of the Plug contract.
+
 Let's compare two very similar looking controllers to see how Phoenix's functional approach with Plug makes the code easier to understand:
 
 controller.rb:
 
 ```ruby
+before_action :find_user
+
 def show do
-  @user = User.find(params[:id])
+  @post = @user.posts.find(params[:id])
+end
+
+def find_user
+  @user = User.find(params[:user_id])
 end
 ```
 
 controller.ex:
 
 ```elixir
+plug :find_user
+
 def show(conn, %{"id" => id}) do
-  render conn, "show.html", user: Repo.get(User, id)
+  post = conn.assigns.user |> assoc(:posts) |> Repo.get(id)
+  render conn, "show.html", post: post
+end
+
+defp find_user(conn, _) do
+  assign(conn, :user, Repo.get(User, conn.params["user_id"]))
 end
 ```
 
-Unless you're a seasoned Rails developer, you wouldn't know that `show` calls `render "show.html"` implicitly. Even if it was called explicitly, you would have to know that all instance variables are copied from the controller instance to the view instance, which is a layer of complexity that few realize when first getting into Rails development. Convention over configuration is a Good Thing, but there's a threshold where implicit behavior sacrifices clarity. Phoenix optimizes for clarity, in a way that we think strikes a perfect balance with easy to use APIs
-Beyond that, as an Object Oriented programmer you must be aware of all the implicit state of the instance, such as the `params` hash, and the `request` object. In Phoenix, everything is explicit. The `conn` is our bag of data and line of communication with the webserver. We pass it along through a pipeline of functions called plugs, transforming the connection, and sending response(s) as needed.
+Unless you're a seasoned Rails developer, you wouldn't know that `show` calls `render "show.html"` implicitly. Even if it was called explicitly, you would have to know that all instance variables are copied from the controller instance to the view instance, which is a layer of complexity that few realize when first getting into Rails development. Convention over configuration is a Good Thing, but there's a threshold where implicit behavior sacrifices clarity. Phoenix optimizes for clarity, in a way that we think strikes a perfect balance with easy to use APIs. Beyond that, as an Object Oriented programmer you must be aware of all the implicit state of the instance, such as the `params` hash, the `request` object, and any instance variables set in `before_action` filters. In Phoenix, everything is explicit. The `conn` is our bag of data and line of communication with the webserver. We pass it along through a pipeline of functions called plugs, transforming the connection, and sending response(s) as needed.
 
 #### Why it matters: easy to test
 
@@ -161,12 +191,16 @@ defmodule MyApp.Router do
     plug :protect_from_forgery
   end
 
+  pipeline :admin do
+    plug AdminAuthentication
+  end
+  
   scope "/" do
     get "/dashboard", DashboardController
   end
 
   scope "/admin" do
-    pipe_through [:browser, AdminAuthentication] # plugged for all routes in this scope
+    pipe_through [:browser, :admin] # plugged for all routes in this scope
 
     resources "/orders", OrderController
   end
@@ -181,7 +215,7 @@ defmodule MyApp.DashboardController do
 end
 ```
 
-Since we use `plug` at all levels of the stack, we can plug in the `AdminAuthentication` plug in the Router and controller for fine-grained request rules.
+Since we use `plug` at all levels of the stack, we can plug in the `AdminAuthentication` plug in the Router and controller for fine-grained request rules. In Rails, you would inherit from an `AdminController`, but the clarity of what transformations apply to your request is lost. You have to track down the inheritiance tree to find out which rules are applied and where. In Phoenix, router pipelines make the concerns of your request explicit.
 
 ### Channels
 
