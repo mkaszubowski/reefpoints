@@ -13,7 +13,7 @@ tags: phoenix, rails, elixir, ruby
 In his yearly recap last December, Brian went public with his [plans to transition the company over to Elixir and Phoenix development](https://dockyard.com/blog/2014/12/28/lessons-learned-three-years-running-a-software-consultancy). Throughout this year, he found it was a smooth transition for the team [going from primarily Rails to Phoenix powered applications](https://dockyard.com/blog/2015/10/29/how-long-it-took-our-team-to-move-from-rails-to-phoenix).
 On the surface, Phoenix shares some familiar conventions with Rails that lets folks jump into new applications and contribute early to a project – on their way to greater mastery. Complete mastery will take a bit more practice than knowing a few shared conventions, but the similar-at-a-glance features has enticed Ruby teams to get involved and many are delighted to get up and running quickly. Unfortunately, it has also led to wrong assumptions about Phoenix's likeness to Rails, causing some to miss the important differences around their core philosophies.
 
-It is common in the Ruby community to say that there are Rails developers and Ruby developers. We don't expect this to happen with Phoenix. Although Phoenix of course introduces its own abstractions, ultimately writing a Phoenix application is writing an Elixir application. Testing Phoenix code is testing Elixir functions. This post aims to address these ideas by comparing the similartieis and differences between Phoenix and Rails and why it matters.
+It is common in the Ruby community to say that there are Rails developers and Ruby developers. We don't expect this to happen with Phoenix. Although Phoenix of course introduces its own abstractions, ultimately writing a Phoenix application is writing an Elixir application. Testing Phoenix code is testing Elixir functions. This post aims to address these ideas by comparing the similarities and differences between Phoenix and Rails and why it matters.
 
 ## Similarities
 
@@ -45,7 +45,7 @@ With Phoenix, nothing is global. There is no monolith. A new Phoenix application
 
 #### Why it matters: startup and shutdown
 
-Elixir conventions structures your projects as small composable "applications" that can be started and stopped as a unit. The trail usually goes like this (using Phoenix itself as an example):
+Elixir conventions structure your projects as small composable "applications" that can be started and stopped as a unit. The trail usually goes like this (using Phoenix itself as an example):
 
 1. Every application has a specification, that may specify which module to invoke when the application will be initialized:
 
@@ -58,7 +58,7 @@ Elixir conventions structures your projects as small composable "applications" t
   ```
 [source](https://github.com/phoenixframework/phoenix/blob/9f9c4663b304a3ff885cc8356cad278e100eb499/mix.exs#L28-L38)
 
-2. If a module is specified, the `start/2` function of this module is invoked 
+2. If a module is specified, the `start/2` function of this module is invoked:
 
   ```elixir
   defmodule Phoenix do
@@ -71,6 +71,7 @@ Elixir conventions structures your projects as small composable "applications" t
   [source](https://github.com/phoenixframework/phoenix/blob/7692aef141f6eab5ad9a0e88875f42c8b02b117d/lib/phoenix.ex#L3  0)
 
 3. The `start/2` function must return the identifier of a supervised process, such as ` Phoenix.Supervisor.start_link` above
+
   [source](https://github.com/phoenixframework/phoenix/blob/7692aef141f6eab5ad9a0e88875f42c8b02b117d/lib/phoenix.ex#L41)
 
 A similar flow happens when stopping your application. The consequence is that it doesn't matter if you are using Phoenix or not, every application has its own and contained start/stop mechanism.
@@ -120,7 +121,7 @@ defmodule MyApp.Endpoint do
 end
 ```
 
-A request starts in your Endpoint, flows through the explicit plug "base middleware", and is handed off to your Router, which itself is just a plug. Then the router applies its own plugs before handing off to a controller, which is (you guessed it!), a Plug. A single level of abstraction throughout the entire stack makes reasoning about your request life-cycle as clear as possible. It also allows easy third-party package integration because of the simplicity of the Plug contract.
+A request starts in your Endpoint, flows through the explicit plug "base middleware", and is handed off to your Router, which itself as just a plug. Then the router applies its own plugs before handing off to a controller, which is (you guessed it!), a Plug. A single level of abstraction throughout the entire stack makes reasoning about your request life-cycle as clear as possible. It also allows easy third-party package integration because of the simplicity of the Plug contract.
 
 Let's compare two very similar looking controllers to see how Phoenix's functional approach with Plug makes the code easier to understand:
 
@@ -157,7 +158,7 @@ Unless you're a seasoned Rails developer, you wouldn't know that `show` calls `r
 
 #### Why it matters: easy to test
 
-Functional programming and the Plug contract makes testing your controllers in isolation, or integration testing your entire endpoint only a matter of passing a `conn` through the plug pipeline and asserting against the result. Additionally, controller actions in Phoenix are just functions, without implicit state. If we need to test the controller in isolation, we call the function!
+Functional programming and the Plug contract make testing your controllers in isolation, or integration testing your entire endpoint, only a matter of passing a `conn` through the plug pipeline and asserting against the result. Additionally, controller actions in Phoenix are just functions, without implicit state. If we need to test the controller in isolation, we call the function!
 
 ```elixir
 test "sends 404 when user is not found" do
@@ -207,7 +208,7 @@ defmodule MyApp.Router do
 end
 
 defmodule MyApp.DashboardController do
-  plug AdminAuthentication                       # plugged only on this controller
+  plug AdminAuthentication # plugged only on this controller
 
   def show(conn, _params) do
     render conn, "show.html"
@@ -215,7 +216,7 @@ defmodule MyApp.DashboardController do
 end
 ```
 
-Since we use `plug` at all levels of the stack, we can plug in the `AdminAuthentication` plug in the Router and controller for fine-grained request rules. In Rails, you would inherit from an `AdminController`, but the clarity of what transformations apply to your request is lost. You have to track down the inheritiance tree to find out which rules are applied and where. In Phoenix, router pipelines make the concerns of your request explicit.
+Since we use `plug` at all levels of the stack, we can plug in the `AdminAuthentication` plug in the Router and controller for fine-grained request rules. In Rails, you would inherit from an `AdminController`, but the clarity of what transformations apply to your request is lost. You have to track down the inheritance tree to find out which rules are applied and where. In Phoenix, router pipelines make the concerns of your request explicit.
 
 ### Channels
 
