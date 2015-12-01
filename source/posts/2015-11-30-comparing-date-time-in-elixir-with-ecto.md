@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparing dates and times with Elixir using Ecto"
+title: "Comparing dates and times in Elixir with Ecto"
 author: 'Brian Cardarella'
 twitter: 'bcardarella'
 github: bcardarella
