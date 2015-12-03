@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Ember Best Practices: Service Backed Components"
-social: true
-author: Lauren Tan
+author: "Lauren Tan"
 twitter: "sugarpirate_"
-github: poteto
+github: "poteto"
 published: true
 tags: ember, javascript, best practices
 summary: "Embrace one-way data flow and get your app ready for routable components."
