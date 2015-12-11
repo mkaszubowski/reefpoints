@@ -21,16 +21,16 @@ At DockYard, we use various diagrams at different stages of the design process. 
 
 The following case study utilizes a few of the diagrams we used here at DockYard. Each of these examples highlights the type of diagram and when in the design process they should be used. (We use [OmniGraffle](https://www.omnigroup.com/omnigraffle) to build these diagrams.)
 
-##Case Study: OutdoorKidz.com
+###Case Study: OutdoorKidz.com
 
-OurdoorKidz.com is a new online store that specializes in seasonal outdoor gear and activites for kids. We've been hired to design and build the customer facing website, which houses the entire inventory of products and allows customers to purchase gear directly from the website.
+OurdoorKidz.com (fictional!) is a new online store that specializes in seasonal outdoor gear and activites for kids. We've been hired to design and build the customer facing website, which houses the entire inventory of products and allows customers to purchase gear directly from the website.
 
 **Target User:** Parents with young kids who are looking for outdoor gear and activities for kids.
 
 **Goal:** Design and build an online store that allows target audience to search for, compare, and purchase items.
 
 
-###1. Journey Map - Design Research
+####1. Journey Map - Design Research
 
 A journey map is diagram in the form of a timeline, which identifies a user’s arrival to and experience surrounding the use of the product. Journey maps are often developed from a user persona based on the target user. They help to understand the context in which someone might interact with the product: why they seek it out, where they interact with it, and what they hope to gain from it. Understanding the use case informs design decisions early on, framing the major actions the user might want to take (features) within the product flow.
 
@@ -38,7 +38,7 @@ A journey map is diagram in the form of a timeline, which identifies a user’s 
 {IMAGE}
 
 
-###2. User flow - Product Development
+####2. User flow - Product Development
 
 A user flow is a diagram of the high level product experience, used to frame the actions taken within the product itself. They are generated from the use case (journey map), allowing us to break down the step by step interactions that must take place for the user to accomplish their goal.
 
@@ -48,7 +48,7 @@ User flows become the basis for sketching and wireframing major areas of the int
 {IMAGE}
 
 
-###2a. Master user flow - Product Development
+####3. Master user flow - Product Development
 
 When we build complex interfaces, they often have multiple use cases. This master user flow connects the customer facing interface, OutdoorKidz.com online store, to the inventory management system for the employees of OutdoorKidz.com. The products overlap where orders come in and invetory is tracked. Connecting the two separate user flows can show the points where the two systems overlap. This can help to ensure the systems are built efficiently and speak to one another.
 
@@ -65,6 +65,8 @@ Here are some of my favorite resources about diagrams and mental models.
 References:
 
 [101 Design Methods](http://www.101designmethods.com) - Vjay Kumar
+
 [100 Diagrams that Changed the World](http://www.amazon.com/100-Diagrams-That-Changed-World/dp/0452298776) - Scott Christianson
+
 [Models of Design](http://www.dubberly.com/models) - Hugh Dubberly
 
