@@ -4,65 +4,61 @@ title: "Which diagrams when?"
 social: true
 author: Ashley Treni
 twitter: "ashleytreni"
-github: danmcclain
+github: atreni
 summary: "Design best practices - utilizing diagrams"
 published: true
 tags: best practices, design strategy, discovery, information graphics
 ---
 
-Diagram: (definition) a simplified drawing showing the appearance, structure, or workings of something; a schematic representation.
+Diagram: (definition) *a simplified drawing showing the appearance, structure, or workings of something; a schematic representation.*
 
-Mental model: (definition) an explanation of someone's thought process about how something works.
-
-
-Diagrams are incredibly valuable. They help align understanding between different stakeholders and build a frame of reference for conversation. Diagrams and mental models are different mapping techniques that give visual form to concepts and ideas.
-
-We use various mapping techniques at different stages of the design process. Each technique documents and represents different aspects of the design research process. It is important to know these techniques and when in the process they should be used.
-
-The following examples are types of maps we’ve used here at DockYard for client projects. Each of these mapping techniques will highlight the map type, when in the design process they should be used, and an example. We use OmniGraffle to build these diagrams.
+Mental model: (definition) *an explanation of someone's thought process about how something works.*
 
 
-1. Journey Map - Design Research
+Diagrams are incredibly valuable as methods of communication. Through visual language and spatial representation, diagrams give form to concepts and ideas.
 
-A journey map is diagram in the form of a timeline, which identifies a user’s arrival and experience of using the product. Journey maps are often developed from a user persona. They help to clarify and understand the context in which someone might interact with a product: why they might seek it out, and the situations or interactions that might occur while using it. 
+At DockYard, we use various diagrams at different stages of the design process. Each type documents and captures different aspects of the design research process. It is valuable to know when in the process these diagrams can be used, as they can support conversations between different stakeholders and help to align understanding.
 
-Journey maps help to refine the use case of a product design, to frame the motivation, need, and experience. Understanding the use case ultimately informs when and where the product is used (decision for desktop, mobile, etc) and defining the majors actions the user might want to take (features).
+The following case study utilizes a few of the diagrams we used here at DockYard. Each of these examples highlights the type of diagram and when in the design process they should be used. (We use [OmniGraffle](https://www.omnigroup.com/omnigraffle) to build these diagrams.)
 
+##Case Study: OutdoorKidz.com
 
+OurdoorKidz.com is a new online store that specializes in seasonal outdoor gear and activites for kids. We've been hired to design and build the customer facing website, which houses the entire inventory of products and allows customers to purchase gear directly from the website.
 
-{IMAGE - Flywheel example?}
+**Target User:** Parents with young kids who are looking for outdoor gear and activities for kids.
 
-
-2. User flow - Product Development
-
-A user flow is a diagram of the actions taken within the product itself. They are generated from the features and major actions defined by the journey map, and build a more detailed interaction of those actions within the context of the product. User flows allow us to break down the step by step interactions that must take place within the product (out of the context of an interface design) for the user to accomplish their goal.
-
-User flows become the basis for sketching and wireframing the interactions with the interface design. They help to identify major screens and navigation paths, by highlighting actions to recur, for example. Understanding these actions and navigation patterns will inform the information architecture and interface design.
-
-{Mariana Tek example?}
+**Goal:** Design and build an online store that allows target audience to search for, compare, and purchase items.
 
 
-2a. Master user flow - Product Development
+###1. Journey Map - Design Research
 
-When we build complex interfaces, they often have multiple use cases. A management user flow might connect to a customer facing interface at various points. When this happens, it is important to document and demonstrate where and when they connect to one another. A Master user flow is a diagram that captures these interdependencies. 
-
-
-{Grapevine or Mariana Tek example?}
+A journey map is diagram in the form of a timeline, which identifies a user’s arrival to and experience surrounding the use of the product. Journey maps are often developed from a user persona based on the target user. They help to understand the context in which someone might interact with the product: why they seek it out, where they interact with it, and what they hope to gain from it. Understanding the use case informs design decisions early on, framing the major actions the user might want to take (features) within the product flow.
 
 
-3. Insights mapping - User Testing
-
-Usability testing is incredibly valuable to the development of a product. Conducting user tests allows us to observe our target audience’s ability to interact with and comprehend the product in development. User tests are designed around a short task and user flow; a facilitator guides the user through a list of prompts. Having a second facilitator to take notes is very valuable, and they can observe the user’s ease of use, hesitation, confusion, intuition, comments and concerns.
-
-Conducting several user tests can yield a wealth of insights, and all must be taken into account. Similar to the design research insights mapping matrix, we can once again begin to cluster patterns of insights from our usability testing results.
-
-For iteration documentation and planning, it is valuable to create an insights map that highlights where changes will be made to the prototype.
+{IMAGE}
 
 
-{Grapevine examples}
+###2. User flow - Product Development
+
+A user flow is a diagram of the high level product experience, used to frame the actions taken within the product itself. They are generated from the use case (journey map), allowing us to break down the step by step interactions that must take place for the user to accomplish their goal.
+
+User flows become the basis for sketching and wireframing major areas of the interface. The navigation, framed around the user experience, informs the information architecture and interface design. Through wireframing, actual content is placed in context and functionalities are incorporated to support calls to action.
 
 
-Knowing when and how to incorporate mapping techniques is very valuable to your process. Maps are good for documentation and tracking decisions throughout the process. They support discussion around problem solving, and can clarify that all stakeholders in the conversation share a common understanding of the solution.
+{IMAGE}
+
+
+###2a. Master user flow - Product Development
+
+When we build complex interfaces, they often have multiple use cases. This master user flow connects the customer facing interface, OutdoorKidz.com online store, to the inventory management system for the employees of OutdoorKidz.com. The products overlap where orders come in and invetory is tracked. Connecting the two separate user flows can show the points where the two systems overlap. This can help to ensure the systems are built efficiently and speak to one another.
+
+
+{IMAGE}
+
+
+
+
+Knowing when and how to incorporate these diagrams can be very valuable to your process. Diagrams are also good for documentation and tracking decisions throughout the process. They support discussion around problem solving, and can clarify that all stakeholders in the conversation share a common understanding of the solution.
 
 Here are some of my favorite resources about diagrams and mental models.
 
