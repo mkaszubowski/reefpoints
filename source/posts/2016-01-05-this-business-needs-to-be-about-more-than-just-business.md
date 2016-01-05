@@ -14,7 +14,7 @@ I've done it before, I'll likely do it again. This one hurt. We've
 worked with this client for the past eight months to rebuild their
 platform. I've given them breaks on price. I've given them free
 engineering time. In the end it came down to a lack of respect for the
-relationship we had.
+relationship they had.
 
 Each year I've written a retrospective about how the year went, the ups
 and downs of running a consultacy. In the first retrospective I wrote:
