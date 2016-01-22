@@ -5,7 +5,6 @@ social: true
 author: Ashley Treni
 twitter: "ashleytreni"
 github: atreni
-summary: ""
 published: true
 tags: community, culture, team
 ---
