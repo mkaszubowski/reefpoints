@@ -25,17 +25,16 @@ Here, a range of numbers is being passed through a chain of several operations. 
 
 Code like this is great to read. It’s got a protagonist. Our hero navigates trials, and comes out changed on the other side. Humans are wired to understand a story.
 
-But do you ever think about how to keep your own functions pipeable? Here’s a hypothetical bit of elixir code: 
+But do you ever think about how to keep your own functions pipeable? Here’s a hypothetical bit of Elixir code: 
 
 ```elixir
 def read_time(str) do
-  result = 
-    str
-    |> String.split(" ")
-    |> Enum.count
-    |> Kernel./(200)
-    |> Integer.to_string
-    |> Kernel.<>("minutes")
+  str
+  |> String.split(" ")
+  |> Enum.count
+  |> Kernel./(200)
+  |> Integer.to_string
+  |> Kernel.<>("minutes")
 end
 
 def related_posts(title, body) do
