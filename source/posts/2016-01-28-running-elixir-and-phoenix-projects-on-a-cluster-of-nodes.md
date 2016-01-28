@@ -12,7 +12,7 @@ tags: elixir, phoenix, deployment
 
 Once you're ready to deploy your Elixir application to multiple servers, you'll want to take advantage of the distributed features that the runtime offers. For example, if you are using Phoenix channels, you'll want broadcasts to be sent across the cluster. You can setup your deployment as a cluster in a few simple steps:
 
-Create a `sys.config` file in your project with the following contents:
+Start by creating a new `sys.config` file in your project. We'll conventionally use the name `sys.config` because Erlang assumes exactly one system configuration file is used when building releases, with this name. Add the following contents the new file:
 
 ```erlang
 [{kernel,
