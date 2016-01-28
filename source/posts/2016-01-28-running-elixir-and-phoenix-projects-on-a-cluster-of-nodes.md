@@ -49,4 +49,4 @@ config :kernel,
 
 Then you build and run your releases as normal and the proper VM configuration is provided when starting. For a complete rundown on using `exrm` to deploy a Phoenix project, see the [official guide](http://www.phoenixframework.org/docs/advanced-deployment).
 
-That's all it takes to run distributed Elixir on a cluster of servers! The Erlang VM supports a number of more advanced options and strategies for running distributed applications, including automatic applicaiton failover to a configured subset of nodes, and more. See the [Erlang documentation](http://erlang.org/doc/design_principles/distributed_applications.html) for a comprehension rundown. 
+That's all it takes to run distributed Elixir on a cluster of servers! The Erlang VM supports a number of more advanced options and strategies for running distributed applications, including automatic application failover to a configured subset of nodes, and more. See the [Erlang documentation](http://erlang.org/doc/design_principles/distributed_applications.html) for a comprehensive rundown. 
