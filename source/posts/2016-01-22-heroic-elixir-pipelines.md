@@ -12,7 +12,7 @@ published: true
 tags: elixir, best practices
 ---
 
-One small source of beauty in Elixir code is the pipe operator:
+One small source of beauty in Elixir code is the [pipe operator][pipe]. It passes the expression on the left as the first argument to the function on the right:
 
 ```elixir
 1..100_000
@@ -77,4 +77,6 @@ end
 
 Ah, that’s better! We realized our hero is the humble post. It learns a few things about itself along the way, and at the end of its journey is published to the world.
 
-So. When writing your code, discover your protagonist. Write functions which take your hero as the first argument, and return her changed for the better. Then The Hero’s Journey will be complete, and you can have beautiful pipelines running all throughout your code.
+So. When writing your code, discover your protagonist. Write functions which take your hero as the first argument, and return it changed for the better. Then The Hero’s Journey will be complete, and you can have beautiful pipelines running all throughout your code.
+
+[pipe]: http://elixir-lang.org/docs/v1.0/elixir/Kernel.html#|>/2
