@@ -1,6 +1,10 @@
 language: ruby
 sudo: false
 cache: bundler
+addons:
+  ssh_known_hosts:
+  - production.dockyard.com
+  - homeport.dockyard.com
 rvm:
 - 2.0.0
 branches:
