@@ -10,7 +10,7 @@ rvm:
 branches:
   only:
   - master
-script: "./travis_deploy.sh > /dev/null"
+script: "./travis_deploy.sh"
 env:
   secure: eAyjmkDKLbXnGvC75KRNVLoAr6WE7ldT6JGOzOKOfQ9WxhEFgzAXoKZVO4mX4DfDfJbZbCyFmxKqALXGXjaBKwU2eQKeq1g4svBnxGPHmOKFMfVjkSCFag0bppE2JK9VXn70lVYFh8kJHavHgQ2pRYlSb78WfmUKbbB9PSH/rSE=
 notifications:
