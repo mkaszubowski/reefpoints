@@ -3,7 +3,7 @@
 set -e
 
 # Push build/posts.json to homeport.dockyard.com
-bundle exec rake build
+bundle exec rake build > /dev/null
 
 chmod 600 ./reefpoints_deploy
 scp -i ./reefpoints_deploy build/posts.json temp_deploy@homeport.dockyard.com:reefpoints/posts.json
