@@ -84,6 +84,10 @@ $ hub pull-request -m "My awesome blog post" -b dockyard:master
 
 * Or do it the old school way via the GitHub UI. Done getting feedback? Merge your branch into `master`.
 
+## Adding images ##
+
+* Upload the image(s) to [imgur](http://imgur.com/) and grab the URL. Be
+  sure to include the image with HTTPS.
 
 ## Legal ##
 
