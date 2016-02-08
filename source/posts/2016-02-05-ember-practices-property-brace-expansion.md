@@ -23,7 +23,8 @@ import Ember from 'ember';
 
 const {
   Component,
-  computed
+  computed,
+  get
 } = Ember;
 
 export default Component.extend({
@@ -51,7 +52,8 @@ import Ember from 'ember';
 
 const {
   Component,
-  computed
+  computed,
+  get
 } = Ember;
 
 export default Component.extend({
