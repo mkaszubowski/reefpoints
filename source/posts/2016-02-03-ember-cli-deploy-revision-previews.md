@@ -121,7 +121,7 @@ import config from './config/environment';
 const {
   Router,
   computed,
-  isNone
+  isPresent
 } = Ember;
 
 const Router = Router.extend({
@@ -133,7 +133,7 @@ const Router = Router.extend({
 
     let revisionMatch = new RegExp(`^${baseRootURL}/(rev-[^/])`).exec(path);
 
-    if (revisionMatch && !isNone(revisionMatch[1])) {
+    if (revisionMatch && isPresent(revisionMatch[1])) {
       return `${baseRootURL}/${revisionMatch[1]}/`;
     } else {
       return `${baseRootURL}/';
