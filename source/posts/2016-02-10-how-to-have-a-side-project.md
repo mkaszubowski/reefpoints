@@ -9,7 +9,7 @@ published: true
 tags: art, design, creativity, culture, inspiration, team
 ---
 
-Pretty much every designer I know has a side project (or five!) They are often in a field related to design and art, but do not replicate exactly what we do at our full time job. Side projects and hobbies are great for relaxing, while adding extra skills or addressing a passion that does not yet have a place in the career.
+Pretty much every designer I know has a side project (or five). They are often in a field related to design and art, but do not replicate exactly what what they do at their full time job. Side projects and hobbies are great for relaxing, while adding extra skills or addressing a passion that does not yet have a place in one's career.
 
 Here’s what I learned about what works well, and what can be problematic for side projects I’ve had over the years. Hope it helps you in your own creative pursuit!
 
@@ -20,9 +20,9 @@ Here’s what I learned about what works well, and what can be problematic for s
 ## 1: Different enough
 To let your brain rest and relax, a side project should be different enough from what you do during the day. When a day’s work is mostly at the computer, I feel a need to switch to analog afterwards, and still have lots of energy. If this is a [design sprint](https://dockyard.com/design-sprints) week, and I’m on my feet most of the day, sketching or writing on the whiteboard - then curling up on my couch with a laptop feels like a welcome break. Essentially, I have different types of energy I could use up during the day, and switching between activities allows me to get more done.
 
-Another principle to keep in mind is to avoid conflict of interest between work and personal projects. When they are different enough, there is a clear separation between the two. I won’t resent filling my week-ends with the personal project, because it does not feel like work. It feels like play!
+Another principle to keep in mind is to avoid conflicting interests between work and personal projects. When they are different enough, there is a clear separation between the two. I won’t resent filling my week-ends with the personal project, because it does not feel like work. It feels like play!
 
-Sports or dance make a great hobby & side project. (I used to spend hours each week rock climbing, then switched to social dancing.) It may seem like there’s no overlap in the skills - but the ability to clearly lead and follow (typical Tango dance roles) within a larger group setting is a great communication skill for a team of designers as well. It also helped me learn my limitations. When you’re several rope-lengths up a cliff and need to tell something to other climbers on the team without seeing them, my voice never seemed loud enough to get across. Since then, I always think of a backup communication method. Do two tugs on the rope mean “go”? You only know if you’ve arranged it ahead of time.
+Sports or dance make a great hobby & side project. I used to spend hours each week rock climbing, then switched to social dancing a few years later. It may seem like there’s no overlap in the skills - but the ability to clearly lead and follow (typical Tango dance roles) within a larger group setting is a great communication skill for a team of designers as well. It also helped me learn my limitations. When you’re several rope-lengths up a cliff and need to tell something to other climbers on the team without seeing them, my voice never seemed loud enough to get across. Since then, I always think of a backup communication method. Do two tugs on the rope mean “go”? You only know if you’ve arranged it ahead of time.
 
 
 ## 2: Similar enough
@@ -49,12 +49,12 @@ I eventually climbed out of this. I negotiated Fridays off at work, trained the 
 
 ## Focus
 
-I now know I can’t get good results from trying to juggle several side projects at a time. But deciding to do just one thing can feel scary. Will I ever get to work on my other things? But it’s the only sure way to make progress.
+I now know I can’t get good results from trying to juggle several side projects at a time. But deciding to do just one thing can feel scary. I often wonder if I'll ever get to work on my other projects. But it’s the only sure way to make progress.
 
 ![Color blocks and sticky notes](https://i.imgur.com/Lveuv3z.jpg)
 *Johannes Itten’s classic Elements of Color (which in forms both art and design) alongside some sticky notes from my UX design life*.
 
-In 2015, I decided to focus on one side project: my exploration of the [overlap between design and modern art](http://www.designartpractice.com/). I put away my sewing machines, and set my Easy shop in holiday mode. I even stopped nagging myself to keep practicing with watercolors or hand lettering. I now have a more realistic to-do list, and can feel “done” and accomplished with the weekly illustrated articles that I plan to write for a year.
+In 2015, I decided to focus on one side project: my exploration of the [overlap between design and modern art](http://www.designartpractice.com/). I put away my sewing machines, and set my Etsy shop in holiday mode. I even stopped nagging myself to keep practicing with watercolors or hand lettering. I now have a more realistic to-do list, and can feel “done” and accomplished with the weekly illustrated articles that I plan to write for a year.
 I’ll be honest: I miss the other side projects I had put on hold. But am OK with not doing them for a while so that once I get to them, I’ll be able to make progress and commit to giving those other passions the focused time they deserve.
 
 
@@ -69,7 +69,7 @@ I went around and asked my intimidatingly talented colleagues to share examples 
 *Pencil Portrait from my very limited [portfolio](https://www.behance.net/edeblois)*
 
 **What do you do outside work?**
-I tend to go back to the things I enjoyed doing before discovering the joy of programming. I have a variety of hobbies that I try to juggle as time permits, ranging from drawing or painting, practicing photography (I took an online photography course at the Photography Institute a few years ago and try to keep), practicing piano (I’ve been taking weekly piano lessons for the past six years), and just gaming.
+I tend to go back to the things I enjoyed doing before discovering the joy of programming. I have a variety of hobbies that I try to juggle as time permits, ranging from drawing or painting, practicing photography (I took an online photography course at the Photography Institute a few years ago and try to keep up), practicing piano (I’ve been taking weekly piano lessons for the past six years), and just gaming.
 
 **How do you feel it feeds into your work, if at all**?
 I don’t particularly feel that any of those activities feed into my work at all, but it’s a nice distraction from my day-to-day work.
@@ -127,6 +127,8 @@ Competitive mountain biking
 Over the years I have participated in many team sports where the performance of the collective group dictates outcome of the competition.  Competitive mountain biking has taken out the variable of team and placed full responsibility on me.  Any success I have realized in this endeavor (which has been minimal to date) is a fringe benefit of deliberate training, sacrifice, failure and exhibition of mental toughness.  
 
 I love the fact teams are a significant part of my professional life - It is the only way I would want it to be.   However, outside of work I have chosen something that is “Different Enough” to keep my other lesser used mental and physical muscles engaged.
+
+
 ## Lauren 🐷 paints! 
 
 ![Character sketch](https://i.imgur.com/1lu42lv.jpg)
@@ -239,3 +241,4 @@ Outside of work, I spend time tasting, photographing, and reviewing craft beer, 
 *Logo and color scheme for the Bumpin’ Pumpkin Beer review site*
 
 I think this hobby has fed into my design work in that it has inspired me to pursue different avenues in design, and gain greater interest into parallel areas. For one, it’s constantly forcing me to write (reviewing means writing of course!) which in turn has made me feel more comfortable writing about design. It also has inspired me to pursue photography (out of need originally) and hand lettering (which is prominent in craft beer labeling and branding). It’s constantly inspired me to pay closer attention to the immense complexity that goes into creating something seemingly so simple and beautiful. The grandeur of the craft, from years of testing recipes to the intricate labor of its packaging design, never ceases to impress me, especially since it’s a commodity that’s taken for granted so often.
+
