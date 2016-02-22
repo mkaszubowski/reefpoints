@@ -9,7 +9,7 @@ published: true
 tags: art, design, creativity, culture, inspiration, team
 ---
 
-Pretty much every designer I know has a side project (or five). They are often in a field related to design, but do not replicate exactly what what they do at their full time job. Side projects and hobbies are great for relaxing, while adding extra skills or addressing a passion that does not yet have a place in one's career.
+Pretty much every designer I know has a side project (or five). They are often in a field related to design, but do not replicate exactly what they do at their full time job. Side projects and hobbies are great for relaxing, while adding extra skills or addressing a passion that does not yet have a place in one's career.
 
 Here’s what I learned about what works well, and what can be problematic for side projects I’ve had over the years. Hope it helps you in your own creative pursuit!
 
