@@ -52,10 +52,10 @@ I eventually climbed out of this. I negotiated Fridays off at work, trained the 
 I now know I can’t get good results from trying to juggle several side projects at a time. But deciding to do just one thing can feel scary. I often wonder if I'll ever get to work on my other projects. But it’s the only sure way to make progress.
 
 ![Color blocks and sticky notes](https://i.imgur.com/kIUHUpm.jpg)
-*Johannes Itten’s classic Elements of Color (which in forms both art and design) alongside some sticky notes from my UX design life*.
+*Johannes Itten’s classic Elements of Color (the book belongs to both ym art life and my design life) and some sticky notes we use for UX design. The colors match perfectly.*
 
 In 2015, I decided to focus on one side project: my exploration of the [overlap between design and modern art](http://www.designartpractice.com/). I put away my sewing machines, and set my Etsy shop in holiday mode. I even stopped nagging myself to keep practicing with watercolors or hand lettering. I now have a more realistic to-do list, and can feel “done” and accomplished with the weekly illustrated articles that I plan to write for a year.
-I’ll be honest: I miss the other side projects I had put on hold. But am OK with not doing them for a while so that once I get to them, I’ll be able to make progress and commit to giving those other passions the focused time they deserve.
+I’ll be honest: I miss the other side projects I had put on hold. But I'm OK with not doing them for a while so that once I get to them, I’ll be able to make progress and commit to giving those other passions the focused time they deserve.
 
 
 ## More examples!
@@ -89,7 +89,7 @@ My after-hours time is spent on open source software. Right now I am working on 
 *A self portrait done on 35mm black and white film*.
 
 ![abstract photo of ice](https://i.imgur.com/odVVRMv.jpg)
-*This is a picture I took of ice. It’s appearance is more smokey than usual due to melting and refreezing, and because of the size of the river I took this in, I was able to capture somewhere around 15 original compositions*.
+*This is a picture I took of ice. Its appearance is more smokey than usual due to melting and refreezing, and because of the size of the river I took this in, I was able to capture somewhere around 15 original compositions*.
 
 ![Musical notation](https://i.imgur.com/BjGN6fP.jpg)
 This is purely representational for me of a possible musical composition. As I do not know how to write and read music, this serves as a visual for my work. Memory alone isn’t enough.
