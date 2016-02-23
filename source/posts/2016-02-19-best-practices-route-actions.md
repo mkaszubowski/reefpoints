@@ -56,7 +56,7 @@ This addon gives you all the goodness of closure actions, and is a great way of 
 
 Helpers are a really nice way of extracting utility functions that you can use in your application. You can create class based Helpers, like `ember-route-action-helper`, or simple pure-function ones using [`Helper.helper`][helper-helper] like the one used in [`ember-toggle-helper`][ember-toggle-helper]. 
 
-Pure-function helpers are simple to grok and understand, so a look at addons like [`ember-truth-helpers`][https://github.com/jmurphyau/ember-truth-helpers] is sufficient to understand them.
+Pure-function helpers are simple to grok and understand, so a look at addons like [`ember-truth-helpers`][ember-truth-helpers] is sufficient to understand them.
 
 `ember-route-action-helper` uses the class based implementation, which must define a `compute` method. This is then invoked every time one of the positional arguments to the helper changes. 
 
@@ -120,6 +120,7 @@ Until next time, thanks for reading!
 [controllers-are-dead]: https://locks.svbtle.com/controllers-are-dead-long-life-controllers
 [ember-route-action-helper]: https://github.com/dockyard/ember-route-action-helper
 [ember-toggle-helper]: https://github.com/poteto/ember-toggle-helper
+[ember-truth-helpers]: https://github.com/jmurphyau/ember-truth-helpers
 [helper-helper]: http://emberjs.com/api/classes/Ember.Helper.html#method_helper
 [helper-introduced]: http://emberjs.com/blog/2015/06/12/ember-1-13-0-released.html#toc_new-ember-js-helper-api
 [jsbin]: http://jsbin.com/jipani/edit?html,js,output
