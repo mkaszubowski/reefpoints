@@ -17,7 +17,7 @@ tags: engineering, best practices, opinion
 **RED** **GREEN** **REFACTOR**
 
 This process has been drilled into our head for over ten years. The goal
-is to push to to writing better software by ensuring that only what you
+is to push to writing better software by ensuring that only what you
 have spec'd out is implemented. The problem however is when you're in
 new territory. In order to write proper tests you need to have an
 understanding of the system it is spec'ing. If the implementation of
@@ -33,7 +33,7 @@ good is it doing?
 
 Well, I've got some secrets to share about Red, Green, Refactor...
 
-### Its OK to spike the implementation first
+### It's OK to spike the implementation first
 
 When trying to implement something new writing the actual implementation
 is sometimes easier than reasoning about how to test said system. In
@@ -54,18 +54,18 @@ the spike you originally wrote.
 ### You don't have to follow any "order"
 
 Take a look at the graph at the top of the page. Where does it start?
-Where does it end? Most people, because of the phrase "Red, Gree,
+Where does it end? Most people, because of the phrase "Red, Green,
 Refactor" feel they *must* start with "Red". Well, you don't. Let's
 assume you inherit an application that has poor, or no, test coverage.
 It's perfectly OK to write simple acceptance tests that assert the
 current behavior of the application. Go directly to "Green". This is OK
-because the application is already live, its working. Once you have the
+because the application is already live, it's working. Once you have the
 happy paths covered in the acceptance tests you've written you can
 refactor with confidence.
 
 ### Break the "rules"
 
-Like most rules "Red", "Green", "Refactor" makes sense for most cases, but
+Like most rules "Red, Green, Refactor" makes sense for most cases, but
 not all. In situations where you find yourself restricted or not moving forward
 feel free to break the rules until you can get back to a place where
 observing them again makes sense.
