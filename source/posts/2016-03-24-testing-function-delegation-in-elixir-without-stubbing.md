@@ -92,7 +92,7 @@ use-case.
 
 So what happens when you are testing with a module that might spawn its
 own process? In those cases I might have an `opts` argument that I can
-work with. Let's assume that for whatever reason `Parent.make_it_so/1`
+work with. Let's assume that for whatever reason `Parent.make_it_so`
 is working in a process on its own:
 
 ```elixir
