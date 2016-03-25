@@ -31,7 +31,7 @@ defmodule Parent do
   defmacro __using__([adapter: adapter]) do
     quote do
       def __adapter__, do: unquote(adapter)
-      def make_it_do(command) do
+      def make_it_so(command) do
         __adapter__.make_it_so(command)
       end
     end
@@ -39,7 +39,22 @@ defmodule Parent do
 end
 ```
 
-How do we test that the adapter's `make_it_so/1` function is being
+In other languages I would stub out `Parent.make_it_so/` and assert that
+this function was being called. For example, if you were using the
+[`mock`][mock] Elixir library you would do:
+
+```elixir
+defmodule CustomParent do
+  use Parent, adapter: FooBar
+end
+
+with_mock CustomParent, [make_it_so: fn(command) -> command end] do
+  CustomParent.make_it_so(:ok)
+end
+```
+
+But as Jose has pointed out we don't want to do this.
+So how do we test that the adapter's `make_it_so/1` function is being
 properly delegated to without stubbing? Well we can rely on Elixir's
 [`send/3`][send] and [`assert_receive`][assert_receive].
 
@@ -121,3 +136,4 @@ allowfullscreen></iframe>
 [send]: http://elixir-lang.org/docs/stable/elixir/Process.html#send/3
 [assert_receive]: http://elixir-lang.org/docs/stable/ex_unit/ExUnit.Assertions.html#assert_receive/3
 [elixirdaze]: http://elixirdaze.com
+[mock]: https://github.com/jjh42/mock
