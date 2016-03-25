@@ -50,7 +50,7 @@ dependencies
 
 Unlike most libraries and web frameworks in various languages, Phoenix
 does not require a central datastore to hold presence information.
-While having to deploy redis or similar datastores increases your
+While having to deploy Redis or similar datastores increases your
 operational overhead, it also introduces a couple severe penalties – a
 single point of failure, and central bottleneck. Worse still, if one
 of your servers goes down, you'll have orphaned data stuck permanently
@@ -68,7 +68,7 @@ netsplits and missed data replication.
 
 None of this would be possible without the innovations from Elixir and
 Erlang which gives us a distributed runtime that's unmatched by other
-languages. When we sat down to design Phoenix presence, instead of
+languages. When we sat down to design Phoenix Presence, instead of
 immediately asking "which database would be best to hold presences?",
 we could ask "how can we best replicate data in a distributed system
 without the user having to worry about it?". The platforms you build
