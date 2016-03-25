@@ -39,7 +39,7 @@ defmodule Parent do
 end
 ```
 
-In other languages I would stub out `Parent.make_it_so/` and assert that
+In other languages I would stub out `Parent.make_it_so/1` and assert that
 this function was being called. For example, if you were using the
 [`mock`][mock] Elixir library you would do:
 
