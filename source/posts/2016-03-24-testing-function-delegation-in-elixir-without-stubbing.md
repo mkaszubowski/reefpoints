@@ -54,16 +54,16 @@ defmodule ParentTest do
 
   defmodule CustomAdapter do
     def make_it_so(_command) do
-      send :ok
+      send self(), :ok
     end
   end
 
-  defmodule InheritParent do
+  defmodule CustomParent do
     use Parent, adapter: CustomAdapter
   end
 
   test "delegates to the adapter" do
-    InheritParent.make_it_to(%{foo: "bar"})
+    CustomParent.make_it_so(%{foo: "bar"})
 
     assert_receive :ok
   end
@@ -90,13 +90,13 @@ defmodule ParentTest do
     end
   end
 
-  defmodule InheritParent do
+  defmodule CustomParent do
     use Parent, adapter: CustomAdapter
   end
 
   test "delegates to the adapter" do
     opts = [pid: self()]
-    InheritParent.make_it_to(%{foo: "bar"}, opts)
+    CustomParent.make_it_so(%{foo: "bar"}, opts)
 
     assert_receive :ok
   end
