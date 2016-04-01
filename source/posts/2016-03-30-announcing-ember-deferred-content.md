@@ -99,4 +99,4 @@ content is incoming, and switch over to the actual content once it's loaded.
 [github]: https://github.com/danmcclain/ember-deferred-content
 [example-app]: http://deferred-example.danmcclain.net/
 [perc-perf]: http://blog.teamtreehouse.com/perceived-performance
-[liquid-fire]:
+[liquid-fire]: http://ember-animation.github.io/liquid-fire/
