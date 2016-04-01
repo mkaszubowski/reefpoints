@@ -18,7 +18,7 @@ route, but don't necessarily want to wait for all of the comments to
 load before displaying the blog post.
 
 [ember-deferred-content][github] takes the promise you need to resolve to show
-your content, and yields 4 subcomponents that you can use to show
+your content, and yields four subcomponents that you can use to show
 content during the different states of your promise:
 
 ```hbs
