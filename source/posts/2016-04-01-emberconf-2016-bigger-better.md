@@ -13,14 +13,14 @@ Leading up to this year's [EmberConf][emberconf] I wasn't sure I was going to at
 My indecisiveness had nothing to do with concerns about Ember or DockYard's
 commitment to the framework. It was simply that I personally haven't been
 writing much Ember over the past six months. Between being a new dad, buying
-a house, running DockYard, and exploring Elixir I lacked the badwidth to
+a house, running DockYard, and exploring Elixir I lacked the bandwidth to
 keep up with what has been happening in Ember.
 
 The deciding factor was to lend moral support for two of our
-engineers who were speaking: [Estelle DeBLois][estelle] and [Lauren Tan][lauren]. They both
+engineers who were speaking: [Estelle DeBlois][estelle] and [Lauren Tan][lauren]. They both
 gave great talks and if that was the only reason it would have been more
 than worth the trip. However, like many things, I was thankfully wrong
-about my conerns attending and would like to share my experience this
+about my concerns attending and would like to share my experience this
 year.
 
 ![](http://images3.cloudhdr.com/users/63df8506-b9d4-11e2-944b-eebc857a8e43/thumbnails/c961d5f8-f614-11e5-912c-ca74e7c7373d/hd_P3293226.jpg)
