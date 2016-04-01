@@ -230,6 +230,8 @@ href="https://twitter.com/tomoguisuru/status/715415989110747136">March
 <script async src="//platform.twitter.com/widgets.js"
 charset="utf-8"></script>
 
+...the people.
+
 [gk]: http://groundkontrol.com/
 [leah]: http://twitter.com/wifelette
 [elixir]: http://elixir-lang.org
