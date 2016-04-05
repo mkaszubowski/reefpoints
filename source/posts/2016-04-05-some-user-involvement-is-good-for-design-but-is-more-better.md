@@ -15,7 +15,7 @@ I recently attended a local design thinking meetup which sought to introduce us 
 
 It was a lot of fun and highly engaging. The reactions from the participants were overwhelmingly enthusiastic. But I was surprised to find that the end result was a room full of nearly identical designs — both to each other and to what already exists in the marketplace. All were some variation of: 1 Select a location, 2 View the menu, 3 Order something, 4 Check out, 5 Thank you. 
  
-With a design brief that was akin to, "Design a new car — anything you want," we ended up with lot full of lookalike beige sedans. No bold hypercars. No original go-anywhere vehicles that could hop a chasm if commanded to do so. This outcome was especially concerning given we weren't "typical users" — we were mostly "designers." So, what happened? 
+With a design brief that was akin to, "Design a new car — anything you want," we ended up with a lot full of lookalike beige sedans. No bold hypercars. No original go-anywhere vehicles that could hop a chasm if commanded to do so. This outcome was especially concerning given we weren't "typical users" — we were mostly "designers." So, what happened? 
 
 ![beigecar](https://i.imgur.com/pzsFUsU.jpg)
 Image Credit: [KIA Media](http://www.kiamedia.com/us/en/models/amanti/2006)
