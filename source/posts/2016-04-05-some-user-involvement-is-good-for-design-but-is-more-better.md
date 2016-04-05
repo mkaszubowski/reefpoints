@@ -7,6 +7,7 @@ summary: "Collaborative design is being touted as the next level of user-centere
 published: true
 tags: Design, Design Process, Design Thinking
 ---
+
 In a typical UX project, user involvement begins early on, as part of research. This leads to insights, which lead to a concise definition of the design problem(s) we're tasked with solving. Then we disappear and transmogrify our inputs into concepts. The users return for usability testing. Their collective feedback informs the next iteration of the concept. 
  
 A movement to keep users around for the entire design process has been gaining traction. Whether it's called "collaborative design," or "co-creation," or "generative design," the starting premise is that everyone, users included, is capable of being a designer. Stick figures welcome. 
