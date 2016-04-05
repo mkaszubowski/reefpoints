@@ -3,7 +3,7 @@ layout: post
 title: "Some user involvement is good for design. But is more better?"
 social: true
 author: Mark Kaplan
-summary: "Collaborative design is being touted as the next level of user-centered design. But it doesn't guarantee a better outcome. Learn about some of the pitfalls -- and how to avoid them."
+summary: "Collaborative design is being touted as the next level of user-centered design. But it doesn't guarantee a better outcome. Learn about some of the pitfalls — and how to avoid them."
 published: true
 tags: Design, Design Process, Design Thinking
 ---
@@ -13,14 +13,14 @@ A movement to keep users around for the entire design process has been gaining t
 
 I recently attended a local design thinking meetup which sought to introduce us to co-creation by having us each design a new service for ordering pizza or sushi. First we’d each sketch something using Sharpies and Post-Its. Then we’d engage one our peers as a “user” to interpret and edit what they saw. We repeated this 3 times, with each user moving the design forward from the point where the last left off.
 
-It was a lot of fun and highly engaging. The reactions from the participants were overwhelmingly enthusiastic.  But I was surprised to find that the end result was a room full of nearly identical designs -- both to each other and to what already exists in the marketplace. All were some variation of: 1 Select a location, 2 View the menu, 3 Order something, 4 Check out, 5 Thank you. 
+It was a lot of fun and highly engaging. The reactions from the participants were overwhelmingly enthusiastic.  But I was surprised to find that the end result was a room full of nearly identical designs — both to each other and to what already exists in the marketplace. All were some variation of: 1 Select a location, 2 View the menu, 3 Order something, 4 Check out, 5 Thank you. 
  
-With a design brief that was akin to, "Design a new car -- anything you want," we ended up with lot full of lookalike beige sedans. No bold hypercars. No original go-anywhere vehicles that could hop a chasm if commanded to do so.  This outcome was especially concerning given we weren't "typical users" -- we were mostly "designers." So, what happened? 
+With a design brief that was akin to, "Design a new car — anything you want," we ended up with lot full of lookalike beige sedans. No bold hypercars. No original go-anywhere vehicles that could hop a chasm if commanded to do so.  This outcome was especially concerning given we weren't "typical users" — we were mostly "designers." So, what happened? 
 
 ![beigecar](https://i.imgur.com/pzsFUsU.jpg)
 Image Credit: [KIA Media](http://www.kiamedia.com/us/en/models/amanti/2006)
 
-##Don’t Facilitate -- Collaborate
+##Don’t Facilitate — Collaborate
 
 We were asked to adopt a facilitator's mindset when co-designing. This meant that we pushed and prodded our users into both finding problems and fixing them with design.
 
@@ -29,9 +29,9 @@ Users are experts in identifying that problems exist. This is why usability test
 ![mechanic](https://i.imgur.com/DiADxmL.jpg)
 Image Credit: [Funzy Pics](http://funzypics.com/board/pins/376/16036)
 
-Finding problems and fixing problems are not the same activity. While simple problems have an obvious cause and effect, most problems faced by designers are complicated or complex -- their causes and/or solutions are not obvious and require further analysis or expertise.  Homer Simpson can bang together a doghouse from a bunch of boards, but only skilled architects, engineers and builders can erect a skyscraper and expect it to stand. 
+Finding problems and fixing problems are not the same activity. While simple problems have an obvious cause and effect, most problems faced by designers are complicated or complex — their causes and/or solutions are not obvious and require further analysis or expertise.  Homer Simpson can bang together a doghouse from a bunch of boards, but only skilled architects, engineers and builders can erect a skyscraper and expect it to stand. 
 
-![homerdoghouse](http://i.imgur.com/4Fa3Ejn.jpg)
+![homerdoghouse](https://i.imgur.com/0H4NRPL.jpg)
 Image Credit: [frinkiac.com](https://frinkiac.com/caption/S03E16/1107454)
 
 ###TIPS FOR DESIGNERS: 
@@ -53,7 +53,7 @@ Because the method we used called for real-time editing, one of the potential di
  
 ###TIPS FOR DESIGNERS: 
 
-1. When sketching concepts, consider increasing the fidelity beyond the bare minimum of Sharpies on Post-its -- for example, use pencils and/or larger Post-Its. This can allow for a bit more detail and/or annotations for those that prefer words to pictures.  
+1. When sketching concepts, consider increasing the fidelity beyond the bare minimum of Sharpies on Post-its — for example, use pencils and/or larger Post-Its. This can allow for a bit more detail and/or annotations for those that prefer words to pictures.  
 2. If a user cannot interpret a low-fidelity sketch, allow clarifying questions to be asked and answered, in addition to Socratic questioning.
 
 ##Avoid Design by Committee 
@@ -62,11 +62,11 @@ Teamwork is effective in accomplishing shared goals: Dribble, pass, shoot, score
 ![designcurve](https://i.imgur.com/FBhaZlp.jpg)
 Image Credit: [Moz](https://moz.com/blog/how-to-ruin-a-web-design-the-design-curve)
 
-If we allow every user to manipulate the design -- one after the other -- we may end up with an unappetizing design that pleases no one.  That’s what happened In our sushi/pizza exercise -- each user started where the previous user left off and were free to change the design to their liking.  
+If we allow every user to manipulate the design — one after the other — we may end up with an unappetizing design that pleases no one.  That’s what happened In our sushi/pizza exercise — each user started where the previous user left off and were free to change the design to their liking.  
 
 What if a user changed or removed something a subsequent user might have found compelling in its earlier form?  What if the final user added something that none of the previous users would have found to their liking, or removed something that excited all the others?  Clearly, the order in which users took their turn designing impacted the outcome. It was a handoff, rather than a handshake.
  
-You don't need a whole committee to spoil the broth -- one empowered user can muck things up quite well on their own given half a chance. Homer Simpson was tasked with designing a car for the "average American" and came up with The Homer, a completely unworkable solution:  
+You don't need a whole committee to spoil the broth — one empowered user can muck things up quite well on their own given half a chance. Homer Simpson was tasked with designing a car for the "average American" and came up with The Homer, a completely unworkable solution:  
 
 ![thehomer](https://i.imgur.com/vbeJYbg.png)
 Image Credit: [Simpsons Wiki](http://simpsons.wikia.com/wiki/The_Homer)
