@@ -16,6 +16,12 @@ $ bundle exec middleman
 $ rake preview
 ```
 
+## Markdown
+
+All blog posts are written in markdown. We use GitHub's flavor of
+markdown; here's a handy guide: [Mastering
+Markdown](https://guides.github.com/features/mastering-markdown/)
+
 ## Want to make your own post? ##
 
 ### The GitHub web interface way
@@ -30,9 +36,9 @@ $ rake preview
 layout: post
 title: "My Awesome Blog post"
 social: true
-author: Dan McClain
-twitter: "_danmcclain"
-github: danmcclain
+author: Jane Doe
+twitter: "janedoe"
+github: janedoe
 summary: "A brief summary of your post"
 published: true
 tags: tags, separating each, with commas
@@ -88,6 +94,14 @@ $ hub pull-request -m "My awesome blog post" -b dockyard:master
 
 * Upload the image(s) to [imgur](http://imgur.com/) and grab the URL. Be
   sure to include the image with HTTPS.
+
+The maximum width for an image is `840px`.
+
+## Tags ##
+
+Tags will become categories once your post is published. Please refer to
+existing tags when tagging your post. This will ensure that we don't
+have multiple variations of the same tag (i.e., `ember` vs `Ember`).
 
 ## Legal ##
 
