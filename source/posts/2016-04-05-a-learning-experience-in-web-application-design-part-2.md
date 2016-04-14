@@ -54,7 +54,7 @@ This is where most users will become more familiar with the application. They wi
 
 ##Too much | Managing full data sets
 
-When the history exceeds the set limit of five items, this state identifies quantity and provides access to the full dataset. The user is going to want to know how much more there is available to them. This information is fairly condensed, so the full history would work with an infinite scroll. The an unconsidered too much state can be very frustrating if the quantity and navigation of your data isn’t intuitive. This is a pretty simple example of a too much state. For a deeper understanding, I looked at data heavy applications like google fusion tables which have pretty comprehensive pagination for this type of state.
+When the history exceeds the set limit of five items, this state identifies quantity and provides access to the full dataset. The user is going to want to know how much more there is available to them.  A  too much state can be very frustrating if the quantity and navigation of your data isn’t intuitive. This Sprout Pass content is condensed and limited by time, so the full history didn’t require pagination.
 
 ![sp_09](http://i.imgur.com/djnaOuq.jpg)
 
