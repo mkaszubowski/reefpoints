@@ -20,7 +20,7 @@ Produce delivery applications aren’t exactly a flooded market, so while green 
 
 Every introduction has the potential to start a new, meaningful relationship. Before subscribing, a user must know what Sprout Pass can do to enhance their quality of life. The introduction for Sprout Pass allows the user to swipe through as much of the content as they want while always providing a path to sign up or login. 
 
-![sp_01](http://i.imgur.com/H5zERww.png)
+![sp_01](http://i.imgur.com/c9G5RJC.jpg)
 
 Photo credit: [Sven Scheuermeier](https://unsplash.com/photos/4R1YpmGO52I)
 
@@ -30,13 +30,13 @@ Either of these states will dynamically appear off focus of the input field, to 
 
 The language and form of error states is often overlooked. The brand’s personality should manifest itself through all bits of copy, even the error states. Negativity and blame in error states doesn’t contribute to a successful application experience. For the invalid email example, Sprout Pass takes the blame for the error, and offers a solution. Model applications like MailChimp and Tumblr maintain a charming personality while doing this as well. 
 
-![sp_02](http://i.imgur.com/MoO83M5.png)
+![sp_02](http://i.imgur.com/BiBzpD4.jpg)
 
 ##Empty state | an existing component with no data
 
 New users typically love to poke around before making any purchases or commitments, but Sprout Pass initially won’t have any data to fill its components. Engaging and informative empty states support this behavior, and can lead to greater customer retention. Other instances of empty states can exist when a user clears the data or an error occurs. When a new user opens Sprout Pass, there won’t be much to show them at first, but they can still be engaged.  A successful empty state will delight, educate, and motivate the user to fill their empty state. In this empty state, a bit of copy identifies what will eventually exist, and the vibrant green button is used as direction.
 
-![sp_03 + sp_04](http://i.imgur.com/WK4hSe0.png)
+![sp_03 + sp_04](http://i.imgur.com/6qXoNrt.jpg)
 
 Photo credit: [Matt Benson](https://unsplash.com/photos/rHbob_bEsSs)
 
@@ -44,19 +44,19 @@ Photo credit: [Matt Benson](https://unsplash.com/photos/rHbob_bEsSs)
 
 To reassure the user of their order completion, the brand color overtakes the screen for a positive order confirmation. The color and icon, consistent with the completed state, combine to substantiate the order confirmation. This screen also prompts the user with two paths forward. This keeps the user engaged while the application is in between waiting for and scheduling packages.
 
-![sp_05 + sp_06](http://i.imgur.com/axfCccS.png)
+![sp_05 + sp_06](http://i.imgur.com/8Oaicnx.jpg)
 
 ##Ideal state
 
 This is where most users will become more familiar with the application. They will see this section for the longest amount of time, unlike some of the other states that will only be viewed for a moment. The selection process and empty state prepared the user for this level of complexity. Because the primary objective of this product is a delivery service, the status of the next delivery is most prominent. This screen updates to track delivery progress, and the editing function becomes inactive 48 hours before deliveries. 
 
-![sp_07 + sp_08](http://i.imgur.com/PN7fg9R.png)
+![sp_07 + sp_08](http://i.imgur.com/eymTDlw.jpg)
 
 ##Too much | Managing full data sets
 
 When the history exceeds the set limit of five items, this state identifies quantity and provides access to the full dataset. The user is going to want to know how much more there is available to them. This information is fairly condensed, so the full history would work with an infinite scroll. The an unconsidered too much state can be very frustrating if the quantity and navigation of your data isn’t intuitive. This is a pretty simple example of a too much state. For a deeper understanding, I looked at data heavy applications like google fusion tables which have pretty comprehensive pagination for this type of state.
 
-![sp_09](http://i.imgur.com/paCSrKW.png)
+![sp_09](http://i.imgur.com/djnaOuq.jpg)
 
 ##Final Thoughts
 
