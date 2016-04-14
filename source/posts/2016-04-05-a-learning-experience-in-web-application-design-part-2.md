@@ -36,7 +36,7 @@ The language and form of error states is often overlooked. The brand’s persona
 
 New users typically love to poke around before making any purchases or commitments, but Sprout Pass initially won’t have any data to fill its components. Engaging and informative empty states support this behavior, and can lead to greater customer retention. Other instances of empty states can exist when a user clears the data or an error occurs. When a new user opens Sprout Pass, there won’t be much to show them at first, but they can still be engaged.  A successful empty state will delight, educate, and motivate the user to fill their empty state. In this empty state, a bit of copy identifies what will eventually exist, and the vibrant green button is used as direction.
 
-![sp_03 + sp_04](http://i.imgur.com/6qXoNrt.jpg)
+![sp_03 + sp_04](http://i.imgur.com/UmUzIxP.jpg)
 
 Photo credit: [Matt Benson](https://unsplash.com/photos/rHbob_bEsSs)
 
