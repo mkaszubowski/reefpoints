@@ -26,7 +26,7 @@ Background photo credit: [Sven Scheuermeier](https://unsplash.com/photos/4R1YpmG
 
 ##Confirmation & Errors
 
-Confirmations and errors will dynamically appear next to input fields, to reassure the user of their progress as they work on the form. For questions that challenge the user to think, inline validation messages can help people complete web forms faster and with less effort. For a complete understanding of when to show inline validation messages, Luke Wroblewski [tested inline validation](http://alistapart.com/article/inline-validation-in-web-forms) against the submit-and-refresh model. 
+Confirmations and errors will dynamically appear next to input fields, to reassure the user of their progress as they work on the form. For questions that challenge the user to think, inline validation messages can help people complete web forms faster and with less effort. If you’d like a more detailed reference for when to show inline validation, Luke Wroblewski [tested inline validation](http://alistapart.com/article/inline-validation-in-web-forms) against the submit-and-refresh model. 
 
 For this sign up, both input states use color and icons to identify and distinguish themselves without being overly dramatic. The brand color is a saturated green, which correlates with correct and positive states. The submit button would turn this color when all the validation has been satisfied. 
 
