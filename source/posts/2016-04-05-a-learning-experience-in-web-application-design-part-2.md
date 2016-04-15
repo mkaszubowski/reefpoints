@@ -24,7 +24,7 @@ Every introduction has the potential to start a new, meaningful relationship. Be
 
 Background photo credit: [Sven Scheuermeier](https://unsplash.com/photos/4R1YpmGO52I)
 
-##Confirmation & Errors
+##Confirmation & errors
 
 Confirmations and errors will dynamically appear next to input fields, to reassure the user of their progress as they work on the form. For questions that challenge the user to think, inline validation messages can help people complete web forms faster and with less effort. If you’d like a more detailed reference for when to show inline validation, Luke Wroblewski [tested inline validation](http://alistapart.com/article/inline-validation-in-web-forms) against the submit-and-refresh model. 
 
@@ -34,7 +34,7 @@ Error states are a necessary part of any application, but the language and form 
 
 ![sp_02](http://i.imgur.com/BiBzpD4.jpg)
 
-##Empty state | an existing component with no data
+##Empty state | An existing component with no data
 
 New users typically love to poke around before making any purchases or commitments, but Sprout Pass initially won’t have any data to fill its components. Engaging and informative empty states support this behavior, and can lead to greater customer retention. Other instances of empty states can exist when a user clears the data or an error occurs. When a new user opens Sprout Pass, there won’t be much to show them at first, but they can still be engaged.  A successful empty state will delight, educate, and motivate the user to add information and interact with the app. In this empty state, a bit of copy identifies what will eventually exist, and the vibrant green button is used as direction.
 
@@ -60,6 +60,6 @@ When the history exceeds the set limit of five items, this state identifies quan
 
 ![sp_09](http://i.imgur.com/djnaOuq.jpg)
 
-##Final Thoughts
+##Final thoughts
 
 This exploration helped me develop a familiarity with interface states that I admittedly would have overlooked. After understanding the value and characteristics for each state, I was able to apply my knowledge of visual systems and hierarchy. Every state of a web application component is integral to a user’s positive experience, and should be designed with intention. Thoughtfully designed interface states will reduce the risk of confusing or surprising a user. All of these states work together to make a streamlined experience for a user. 
