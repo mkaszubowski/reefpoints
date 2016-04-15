@@ -10,11 +10,11 @@ published: true
 tags: Design, Design Process, Design Thinking
 ---
 
-From my [last post](https://dockyard.com/blog/2016/03/11/a-learning-experience-in-web-application-design-part-1), I used the concept for a product called Sprout Pass to explore Interface feedback, and the potential it has for building trust and positive experiences. I consolidated my exploration, planning, and research to focus on the visual UI design. To cover my bases, I designed component screens with a broad range of associated states. 
+From my [last post](https://dockyard.com/blog/2016/03/11/a-learning-experience-in-web-application-design-part-1), I used the concept for a product called Sprout Pass to explore how an interface can support a user by providing feedback, and the potential it has for building trust and positive experiences. I consolidated my exploration, planning, and research to focus on the visual UI design. To cover my bases, I designed component screens with a broad range of associated states. 
 
 Sprout Pass is a web application that delivers fresh local produce right to your doorstep. The idea that inspires and informs the application is community-supported agriculture, otherwise known as farm sharing. Sprout Pass facilitates orders and delivery to connect users to their local farmers. Users need a UI they can trust and enjoy, especially for a perishable product like produce. 
 
-Produce delivery applications aren’t exactly a flooded market, so while green might be an “obvious” choice, it was a viable branding option. I chose a positive green that’s closer to blue than yellow to avoid an overly acidic aesthetic. For the typography, I relied on the humanist sans serif Whitney. The more extreme weights of this typeface have an honest and friendly tone, that establish the Sprout Pass personality. 
+Produce delivery applications aren’t exactly a flooded market, so while green might be an “obvious” choice, it was a viable branding option. I chose a positive green that’s closer to blue than yellow to avoid an overly acidic aesthetic. For the typography, I relied on the humanist sans serif Whitney. The heavier weights of this typeface have an honest and friendly tone, that establish the Sprout Pass personality. Let's go through a few examples of different states an interface can be in. 
 
 ##Before a user does anything
 
@@ -22,7 +22,7 @@ Every introduction has the potential to start a new, meaningful relationship. Be
 
 ![sp_01](http://i.imgur.com/c9G5RJC.jpg)
 
-Photo credit: [Sven Scheuermeier](https://unsplash.com/photos/4R1YpmGO52I)
+Background photo credit: [Sven Scheuermeier](https://unsplash.com/photos/4R1YpmGO52I)
 
 ##Confirmation & Errors
 
@@ -38,7 +38,7 @@ New users typically love to poke around before making any purchases or commitmen
 
 ![sp_03 + sp_04](http://i.imgur.com/UmUzIxP.jpg)
 
-Photo credit: [Matt Benson](https://unsplash.com/photos/rHbob_bEsSs)
+Background photo credit: [Matt Benson](https://unsplash.com/photos/rHbob_bEsSs)
 
 ##Done | Ensuring a successful transaction
 
