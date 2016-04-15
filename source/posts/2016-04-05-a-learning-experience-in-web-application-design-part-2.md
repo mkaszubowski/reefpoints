@@ -30,7 +30,7 @@ Confirmations and errors will dynamically appear next to input fields, to reassu
 
 For this sign up, both input states use color and icons to identify and distinguish themselves without being overly dramatic. The brand color is a saturated green, which correlates with correct and positive states. The submit button would turn this color when all the validation has been satisfied. 
 
-The language and form of error states is often overlooked. The brand’s personality should manifest itself through all bits of copy, even the error states. Negativity and blame in error states doesn’t contribute to a successful application experience. For the invalid email example, Sprout Pass takes the blame for the error, and offers a solution. Model applications like MailChimp and Tumblr maintain a charming personality while doing this as well. 
+Error states are a necessary part of any application, but the language and form of them is often overlooked. The brand’s personality should manifest itself through all bits of copy, even the error states. Negativity and blame in error states doesn’t contribute to a successful application experience. For the invalid email example, Sprout Pass takes the blame for the error, and offers a solution. Model applications like MailChimp and Tumblr maintain a charming personality while doing this as well. 
 
 ![sp_02](http://i.imgur.com/BiBzpD4.jpg)
 
