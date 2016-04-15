@@ -36,7 +36,7 @@ Error states are a necessary part of any application, but the language and form 
 
 ##Empty state | an existing component with no data
 
-New users typically love to poke around before making any purchases or commitments, but Sprout Pass initially won’t have any data to fill its components. Engaging and informative empty states support this behavior, and can lead to greater customer retention. Other instances of empty states can exist when a user clears the data or an error occurs. When a new user opens Sprout Pass, there won’t be much to show them at first, but they can still be engaged.  A successful empty state will delight, educate, and motivate the user to fill their empty state. In this empty state, a bit of copy identifies what will eventually exist, and the vibrant green button is used as direction.
+New users typically love to poke around before making any purchases or commitments, but Sprout Pass initially won’t have any data to fill its components. Engaging and informative empty states support this behavior, and can lead to greater customer retention. Other instances of empty states can exist when a user clears the data or an error occurs. When a new user opens Sprout Pass, there won’t be much to show them at first, but they can still be engaged.  A successful empty state will delight, educate, and motivate the user to add information and interact with the app. In this empty state, a bit of copy identifies what will eventually exist, and the vibrant green button is used as direction.
 
 ![sp_03 + sp_04](http://i.imgur.com/UmUzIxP.jpg)
 
