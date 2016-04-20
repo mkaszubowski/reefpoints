@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Is it too early to call a designer?"
+title: "Is it time to call a designer?"
 social: true
 author: Maria Matveeva
 twitter: "rgbcolor"
@@ -8,7 +8,6 @@ summary: "Since its beginnings in the 1800s, design as a profession has grown to
 published: true
 tags: Design, UX Design, Business, Design Strategy
 ---
-
 
 
 There is an old fable about a philosopher. A baby was born, and the parents presented the baby to the philosopher in their city at the age of just one month. They apologized for being so early, and asked for advice on how to best plan for an education so the baby would grow up as a proper citizen. To which the philosopher replied - “You’re not too early. You are ten months late.”
