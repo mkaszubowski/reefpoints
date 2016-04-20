@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "A learning experience 
-in web application design (part 2 of 2)"
+title: "A learning experience in web application design (part 2 of 2)"
 social: true
 author: Chris Bowers
 twitter: "chrisbowerss"
