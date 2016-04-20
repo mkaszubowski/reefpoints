@@ -12,7 +12,7 @@ tags: Design, UX Design, Business, Design Strategy
 
 There is an old fable about a philosopher. A baby was born, and the parents presented the baby to the philosopher in their city at the age of just one month. They apologized for being so early, and asked for advice on how to best plan for an education so the baby would grow up as a proper citizen. To which the philosopher replied - “You’re not too early. You are ten months late.”
 
-I could not track down a proper source for this - most likely it’s an ancient Confucian fable. But I always come back to it when I plan and schedule design work. The moral of it keeps coming to mind: “you thought it was too early, but it is best to start even earlier”
+I could not track down a proper source for this - most likely it’s an ancient Confucian fable. But I always come back to it when I plan and schedule design work. The moral of it keeps coming to mind: “you thought it was too early, but it’s best to start even earlier.”
 
 
 ## Why we think “it’s too early” to add design
