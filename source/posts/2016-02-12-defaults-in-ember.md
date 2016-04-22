@@ -85,10 +85,17 @@ console.log(bar); // { name: 'bar' }
 console.log(foo); // { name: 'bar' }
 ```
 
+Lucky for us, Ember has made it easier to avoid this pitfall by deprecating the use of a
+complex object as a default value for a model property. If you try to set an attribute with
+a default value of type `"object"`, you'll see a warning message: `Non primitive
+defaultValues are deprecated because they are shared between all instances. If you would
+like to use a complex object as a default value please provide a function that returns the
+complex object.` This is your cue to undo.
+
 ## A better, and often forgotten option
 
-Don't fret because this issue is just a simple fix away. `defaultValue` also accepts
-a function. Hooray! Let's modify our code to work as expected.
+Don't fret, because this issue is just a simple fix away. `defaultValue` also accepts
+a function. Hooray! Let's modify our code to work as we would expect.
 
 ```js
 // app/models/person.js
