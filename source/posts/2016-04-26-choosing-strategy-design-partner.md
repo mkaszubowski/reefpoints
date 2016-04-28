@@ -30,7 +30,7 @@ Do they seem interested in listening to you, and learning from you?  Are they fo
 Are they asking deep questions about your goals?  Your past successes and failures?  Your personal situation? They should regard their job as not only to deliver what you want and need, but to make you look good.
 </br>
 ##Become Comfortable Being Uncomfortable
->"If it scares you, it might be a good thing to try." —Seth Godin
+>"If it scares you, it might be a good thing to try."</br></br>—Seth Godin
 
 As you answer the agency's questions, also pay attention to the kinds of questions they ask. Are they making you uncomfortable with some of those questions? That’s OK.  
 
