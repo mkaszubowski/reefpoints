@@ -10,13 +10,15 @@ tags: Design, Design Process, Design Thinking
 ![Mad Men Barbie Dolls](https://i.imgur.com/iHgcgzh.jpg)
 </br>Image Credit: [AMC](http://www.amc.com/shows/mad-men/extras/mad-men-barbie-dolls#/1)
 
- You're interviewing candidates for an opening on your team. You're torn between two finalists. Each has deep skills and experience, comes with solid references, and would increase diversity. In a subjective or objective evaluation, they'd be equal.
+You're interviewing candidates for an opening on your team. You're torn between two finalists. Each has deep skills and experience, comes with solid references, and would increase diversity. In a subjective or objective evaluation, they'd be equal.
  
- How can you make such an important decision, without resorting to a coin flip?  It comes down not only to _what they know_, but _who they are_.  
+How can you make such an important decision, without resorting to a coin flip?  
+  
+Choosing a partner for strategy and design of web applications is a lot like hiring that new team member. Every agency you'll meet will tell you about their services and "The Process." They’ll share a cloud of client logos and case studies with slick creative and impressive results. Their offices will be way more hip than yours. You’ll be shown a photo of a designer pointing to a wall covered with hundreds of Post-Its™.
  
- Choosing a partner for strategy and design of web applications is a lot like hiring that new team member. Every agency you'll meet will tell you about their services and "The Process." They’ll share a cloud of client logos and case studies with slick creative and impressive results. Their offices will be way more hip than yours. You’ll be shown a photo of a designer pointing to a wall covered with hundreds of Post-Its™.
+With every agency pitching what can feel like the same experience and capabilities, how do you choose?  
  
- With every agency pitching what feels like the same experience and capabilities, _how do you choose_?
+For both that new hire and the agency, it comes down to not only _what they know_, but _who they are_.  
 
 >"A gossip talks about other people. A bore talks about himself. A brilliant conversationalist talks to you about yourself."</br></br>—Unknown
 
