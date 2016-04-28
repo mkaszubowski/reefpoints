@@ -7,6 +7,7 @@ summary: "It can be hard to tell agencies apart. Strategy can make all the diffe
 published: true
 tags: Design, Design Process, Design Thinking
 ---
+
 ![Mad Men Barbie Dolls](https://i.imgur.com/iHgcgzh.jpg)
 </br>Image Credit: [AMC](http://www.amc.com/shows/mad-men/extras/mad-men-barbie-dolls#/1)
 
