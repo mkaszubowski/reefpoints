@@ -29,7 +29,7 @@ Do they seem interested in listening to you, and learning from you?  Are they fo
 
 Are they asking deep questions about your goals?  Your past successes and failures?  Your personal situation? They should regard their job as not only to deliver what you want and need, but to make you look good.
 </br>
-##Become Comfortable being Uncomfortable
+##Become Comfortable Being Uncomfortable
 >"If it scares you, it might be a good thing to try." —Seth Godin
 
 As you answer the agency's questions, also pay attention to the kinds of questions they ask. Are they making you uncomfortable with some of those questions? That’s OK.  
@@ -38,7 +38,7 @@ Sometimes the most important questions are uncomfortable because they challenge 
  
 Strategic designers routinely chart a course through uncertain seas. They should be comfortable being uncomfortable. They should help you feel the same way. Rather than being taken aback, take a shot at answering those questions.
 </br>
-##Experience Isn't Always the Best Teacher
+##Experience Isn't Always The Best Teacher
 >“Experience is simply the name we give our mistakes.”</br></br>—Oscar Wilde
 
 A claim of “experience” is no guarantee of a favorable outcome. Experience is a set of responses to particular business problems (not yours), in particular contexts (not yours, either). That’s why duplicating a successful company's business model or solution rarely works out. Despite what best-selling business books seem to suggest, there’s no single recipe for success. Every challenge is fresh, every solution begins with a blank page.
@@ -58,7 +58,7 @@ Look for evidence for how an agency leverages “abductive reasoning” — the 
 
 A rich set of design-thinking tools and methods will enable the agency to wrap their heads around the unfamiliar. Ask them not just which problems they’ve solved, but also how they learn and share knowledge.
 </br>
-##When It's Decision Time
+##It's Decision Time
 >"Trust yourself, you know more than you think you think you do."</br></br>—Dr. Benjamin Spock
 
 Like hiring the right team member, finding the right agency partner is about fit. Look for the agency that cares as much about figuring out if you're a good client for them, as you do figuring out if they're a good agency for you.
