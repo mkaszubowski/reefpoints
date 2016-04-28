@@ -17,7 +17,6 @@ How can you make such an important decision, without resorting to a coin flip?
 Choosing a partner for strategy and design of web applications is a lot like hiring that new team member. Every agency you'll meet will tell you about their services and "The Process." They’ll share a cloud of client logos and case studies with slick creative and impressive results. Their offices will be way more hip than yours. You’ll be shown a photo of a designer pointing to a wall of design artifacts.
  
 With every agency pitching what can feel like the same experience and capabilities, how do you choose?  
-
 </br>
 ##The Client Should Always Come First
 >"A gossip talks about other people. A bore talks about himself. A brilliant conversationalist talks to you about yourself."</br></br>—Unknown
@@ -60,8 +59,6 @@ A rich set of design-thinking tools and methods will enable the agency to wrap t
 ##It's Decision Time
 >"Trust yourself, you know more than you think you think you do."</br></br>—Dr. Benjamin Spock
 
-Like hiring the right team member, finding the right agency partner is as much about _who they are_ as _what they know_. 
-
-To ensure a good fit, the agency should care as much about figuring out if you're a good client for them, as you do figuring out if they're a good agency for you.
+Like hiring the right team member, finding the right agency partner is as much about _who they are_ as _what they know_. To ensure a good fit, the agency should care as much about figuring out if you're a good client for them, as you do figuring out if they're a good agency for you.
 
 Don’t look for an agency who claims they can solve all your problems. Look for one who will face them with you.
