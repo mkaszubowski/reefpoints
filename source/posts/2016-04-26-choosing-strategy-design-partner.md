@@ -60,8 +60,6 @@ A rich set of design-thinking tools and methods will enable the agency to wrap t
 ##It's Decision Time
 >"Trust yourself, you know more than you think you think you do."</br></br>—Dr. Benjamin Spock
 
-Like hiring the right team member, finding the right agency partner is as much about _who they are_ as _what they know_. 
-
-To ensure a good fit, the agency should care as much about figuring out if you're a good client for them, as you do figuring out if they're a good agency for you.
+Like hiring the right team member, finding the right agency partner is as much about _who they are_ as _what they know_. To ensure a good fit, the agency should care as much about figuring out if you're a good client for them, as you do figuring out if they're a good agency for you.
 
 Don’t look for an agency who claims they can solve all your problems. Look for one who will face them with you.
