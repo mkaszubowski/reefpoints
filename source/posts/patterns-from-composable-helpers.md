@@ -77,7 +77,7 @@ export default helper(getHelper);
 
 ### Solution: Observers
 
-
+Yes you heard it right, observers are a perfect candidate to solve the problem that our helper won't recompute when we want it to. Lets take a look at the `propertyPathDidChange` and `contentDidChange` observers
 
 [lauren]: https://twitter.com/sugarpirate_
 [blogpost-lauren]: https://dockyard.com/blog/2016/04/18/ember-composable-helpers
