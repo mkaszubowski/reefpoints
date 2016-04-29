@@ -54,19 +54,19 @@ components themselves?
 
 {{! components/button-wrapper.hbs}}
   <h2>Button Wrapper</h2>
-  {{press-button click=(action this.attrs.click)}}
+  {{press-button click=(action click)}}
 
 {{! components/press-button.hbs}}
-  <button {{action (action this.attrs.click)}}>My Button</button>
+  <button {{action (action click)}}>My Button</button>
 ```
 
 Closure actions are called by using the `action` helper, which in turn
-passes down the function to the component, defining it at `this.attrs.<property
-name>`, just like other properties passed to your component. [The `attrs`
-property is new to Ember 1.13][attrs] At the bottom, the `<button>` action just
-calls the action, and the controller action is the same
-as before. [You can see it in action here][simple-example]. There is no code
-backing the component at this point.
+passes down the function to the component, defining it at `<property
+name>`, just like other properties passed to your component.At the
+bottom, the `<button>` action just calls the action, and the controller
+action is the same as before. [You can see it in action
+here][simple-example]. There is no code backing the component at this
+point.
 
 ## Ok, what if I wanted to do something a bit more complicated
 
@@ -99,16 +99,16 @@ look at a bit of code to make this clearer:
 
 {{! components/cat-wrapper.hbs}}
     <h2>Cats</h2>
-    {{press-button count=1 class="press-button" click=(action this.attrs.click "cat")}}
-    {{press-button count=2 class="press-button" click=(action this.attrs.click "cats")}}
+    {{press-button count=1 class="press-button" click=(action click "cat")}}
+    {{press-button count=2 class="press-button" click=(action click "cats")}}
 
 {{! components/dog-wrapper.hbs}}
   <h2>Dogs</h2>
-  {{press-button count=1 class="press-button" click=(action this.attrs.click "dog")}}
-  {{press-button count=2 class="press-button" click=(action this.attrs.click "dogs")}}
+  {{press-button count=1 class="press-button" click=(action click "dog")}}
+  {{press-button count=2 class="press-button" click=(action click "dogs")}}
 
 {{! components/press-button.hbs}}
-  <button {{action (action this.attrs.click this.attrs.count)}}>{{this.attrs.count}}</button>
+  <button {{action (action click count)}}>{{count}}</button>
 ```
 
 Notice how we pass `cat/cats/dog/dogs` to the `action` of each `press-button`
@@ -123,7 +123,7 @@ this example][currying-action].
 ## What if I don't use the action helper in my deepest component?
 
 All the examples so far use the `action` helper in `press-button`, but if you
-wanted to call your action manually, you'd just call `this.attrs.click()` to
+wanted to call your action manually, you'd just call `click()` to
 call the function passed into the component. [Here is an updated version of the
 currying example that uses an action in the `press-button`
 component][explicit-call]. We still pass the argument to the curried function.
@@ -138,7 +138,6 @@ to our deepest component and fire the action directly from there. This will
 lead to easier debugging, as the `sendAction` way was a lot harder to grok
 where your component actions were breaking.
 
-[attrs]: http://emberjs.com/blog/2015/05/10/run-up-to-two-oh.html#toc_the-code-attrs-code-property
 [explicit-call]: http://jsbin.com/logawi/4/edit?html,js,output
 [currying-action]: http://jsbin.com/logawi/3/edit?html,js,output
 [curry]: https://en.wikipedia.org/wiki/Currying
