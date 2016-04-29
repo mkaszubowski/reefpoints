@@ -26,7 +26,6 @@ const {
   get,
   observer,
   defineProperty,
-  isEmpty,
   computed: { oneWay }
 } = Ember;
 
@@ -40,12 +39,6 @@ export default Helper.extend({
 
   propertyPathDidChange: observer('propertyPath', function() {
     let propertyPath = get(this, 'propertyPath');
-    
-    if (isEmpty(propertyPath)) {
-      defineProperty(this, 'content', null);
-      return;
-    }
-    
     defineProperty(this, 'content', oneWay(`targetObject.${propertyPath}`));
   }),
 
@@ -77,8 +70,18 @@ export default helper(getHelper);
 
 ### Solution: Observers
 
-Yes you heard it right, observers are a perfect candidate to solve the problem that our helper won't recompute when we want it to. Lets take a look at the `propertyPathDidChange` and `contentDidChange` observers
+Yes you heard it right, observers are a perfect candidate to solve the problem that our helper won't recompute when we want it to. So lets take a look at the `propertyPathDidChange` and `contentDidChange` observers.
+
+```js
+propertyPathDidChange: observer('propertyPath', function() {
+  let propertyPath = get(this, 'propertyPath');
+  defineProperty(this, 'content', oneWay(`targetObject.${propertyPath}`));
+})
+```
+
+Let me explain what happens with this observer. On the first line we define an observer that will be triggered every time `propertyPath` gets updated. In the function body we get the value of `propertyPath` and use it to define a new computed property at runtime, we do that using [`defineProperty`][defineproperty]. 
 
 [lauren]: https://twitter.com/sugarpirate_
 [blogpost-lauren]: https://dockyard.com/blog/2016/04/18/ember-composable-helpers
 [get-helper]: https://github.com/jmurphyau/ember-get-helper/blob/master/addon/helpers/get-glimmer.js
+[defineproperty]: http://emberjs.com/api/classes/Ember.html#method_defineProperty
