@@ -29,7 +29,7 @@ defmodule MyApp.PostController do
   end
 
   def create(conn, %{"post" => post_params}) do
-    {:ok, post} = Blog.publish_post(conn.assigns.current_user, id)
+    {:ok, post} = Blog.publish_post(conn.assigns.current_user, post_params)
     redirect(conn, to: user_post_path(conn, conn.assigns.current_user, post)
   end
 end
@@ -52,13 +52,13 @@ defmodule MyApp.PostController do
   end
 
   def create(conn, %{"post" => post_params}, current_user) do
-    {:ok, post} = Blog.publish_post(current_user, id)
+    {:ok, post} = Blog.publish_post(current_user, post_params)
     redirect(conn, to: user_post_path(conn, current_user, post)
   end
 end
 ```
 
-Much nicer. We simply overrode `action/2` on the controller, and modified the arities of our controller actions to include a new third argument, the `current_user`, or `:guest` if we aren't enforcing authentication. If we want to apply this to multiple controllers, we can extract it to `MyApp.Controller` module:
+Much nicer. We simply overrode `action/2` on the controller, and modified the arities of our controller actions to include a new third argument, the `current_user`, or `:guest` if we aren't enforcing authentication. If we want to apply this to multiple controllers, we can extract it to a `MyApp.Controller` module:
 
 
 ```elixir
@@ -82,11 +82,11 @@ Now any controller that wants to use our modified actions can `use MyApp.Control
 
 ### Rendering the `ErrorView` directly
 
-Most folks use their `ErrorView` to handle rendering exceptions after they are caught and translated to the propper status code, such as a `Ecto.NoResultsError` rendering the "404.html" template or a `Phoenix.ActionClauseError` rending the "400.html" template. What many miss is the fact that the ErrorView is just like any other view. It can and should be called directly to render responses for your error cases rather than relying on exceptions for all error possibilities. For example, imagine handling the error cases for our `PostController` in the previous example:
+Most folks use their `ErrorView` to handle rendering exceptions after they are caught and translated to the propper status code, such as a `Ecto.NoResultsError` rendering the "404.html" template or a `Phoenix.ActionClauseError` rendering the "400.html" template. What many miss is the fact that the `ErrorView` is just like any other view. It can and should be called directly to render responses for your error cases rather than relying on exceptions for all error possibilities. For example, imagine handling the error cases for our `PostController` in the previous example:
 
 ```elixir
 def create(conn, %{"post" => post_params}, current_user) do
-  with {:ok, post} <- Blog.publish_post(current_user, id) do
+  with {:ok, post} <- Blog.publish_post(current_user, post_params) do
     redirect(conn, to: user_post_path(conn, current_user, post)
   else
     {:error, changeset} -> render(conn, "edit.html", changeset: changeset)
@@ -133,7 +133,7 @@ def delete(conn, _, current_user) do
 end
 ```
 
-In this case, we want to notify our staff about an account cancellation, say by sending an email, but we don't want the client to wait on this particular work. It might feel natural to use `Task.async` here, but since we aren't awaiting the result and the client isn't concerned about its success, we have an issue. First, we are linked to the caller, so any abnormal exit on either side will crash the other. The client could get a 500 error after their account has been canceled and not be sure if their operation was successful. Likewise, our staff notice could be brought down by an error when sending the response, preventing our staff notice of the completed event. We can use `Task.Supervisor` and its `async_no_link` to achieve an offloaded process that is isolated under its own supervision tree.
+In this case, we want to notify our staff about an account cancellation, say by sending an email, but we don't want the client to wait on this particular work. It might feel natural to use `Task.async` here, but since we aren't awaiting the result and the client isn't concerned about its success, we have an issue. First, we are linked to the caller, so any abnormal exit on either side will crash the other. The client could get a 500 error after their account has been canceled and not be sure if their operation was successful. Likewise, our staff notice could be brought down by an error when sending the response, preventing our staff being alerted of the completed event. We can use `Task.Supervisor` and its `async_no_link` to achieve an offloaded process that is isolated under its own supervision tree.
 
 First, we'd need to add our own `Task.Supervisor`, to our supervision tree, in `lib/my_app.ex`:
 
