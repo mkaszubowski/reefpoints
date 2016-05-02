@@ -115,11 +115,11 @@ def create(conn, %{"access_code" => code}) do
   twitter  = Task.async(fn -> Twitter.get_token(code) end)
 
   render(conn, "create.json", facebook: Task.await(facebook),
-                              twitter: Task.await(twitter)
+                              twitter: Task.await(twitter))
 end
 ```
 
-In this case, we want to fetch a token from Facebook and Twitter, and we can do this work in parallel since the tasks do not coupled in any way. When rendering our JSON response for the client, we can await both tasks and send the response back. This use of `Task.async` and `Task.await` is just fine, but now imagine another case where we want to fire off a quick task and immediately respond to the client.
+In this case, we want to fetch a token from Facebook and Twitter, and we can do this work in parallel since the tasks are not coupled in any way. When rendering our JSON response for the client, we can await both tasks and send the response back. This use of `Task.async` and `Task.await` is just fine, but now imagine another case where we want to fire off a quick task and immediately respond to the client.
 
 ```elixir
 def delete(conn, _, current_user) do
