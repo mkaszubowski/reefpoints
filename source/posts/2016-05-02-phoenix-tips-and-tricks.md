@@ -93,7 +93,7 @@ def create(conn, %{"post" => post_params}, current_user) do
     {:error, :unauthorized} ->
       render(conn, MyApp.ErrorView, :"401", message: "You are not authorized to publish posts")
     {:error, :rate_limited} ->
-      render(conn, MyApp.ErrorView, :"429", message: "You are exceeded the maximum allowed posts for today")
+      render(conn, MyApp.ErrorView, :"429", message: "You have exceeded the max allowed posts for today")
   end
 end
 ```
