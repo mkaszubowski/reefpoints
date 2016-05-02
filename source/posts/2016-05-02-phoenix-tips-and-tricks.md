@@ -17,7 +17,7 @@ As newcomers get up and running quickly with Phoenix, we see folks hit a few com
 
 Often times, you'll find yourself repeatedly needing to access connection information in your controller actions, such as `conn.assigns.current_user` or similarly reaching deeply into nested connection information. This can become tedious and obscures the code. While we could extract the lookup to a function, such as `current_user(conn)`, then we are needlessly performing extra map access when we only need to do the lookup a single time. There's a better way.
 
-Phoenix controllers all contain an `action/2` plug, which is called last in the controller pipeline. This function is responsible for calling the function specified in the route, but Phoenix makes it overridable so you can customized your controller actions. For example, imagine the following controller:
+Phoenix controllers all contain an `action/2` plug, which is called last in the controller pipeline. This plug is responsible for calling the function specified in the route, but Phoenix makes it overridable so you can customize your controller actions. For example, imagine the following controller:
 
 ```elixir
 defmodule MyApp.PostController do
