@@ -42,7 +42,7 @@ defmodule MyApp.PostController do
   use MyApp.Web, :controller
 
   def action(conn, _) do
-    args = [conn.params, conn.assigns[:current_user] || :guest]
+    args = [conn, conn.params, conn.assigns[:current_user] || :guest]
     apply(__MODULE__, action_name(conn), args)
   end
 
@@ -71,7 +71,7 @@ defmodule MyApp.Controller do
   end
 
   def __action__(controller, conn) do
-    args = [conn.params, conn.assigns[:current_user] || :guest]
+    args = [conn, conn.params, conn.assigns[:current_user] || :guest]
     apply(controller, Phoenix.Controller.action_name(conn), args)
   end
 end
