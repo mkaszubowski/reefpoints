@@ -107,7 +107,7 @@ Here we've used the Elixir 1.3 `with/else` expressions. Note how we are able to 
 
 ### Avoid Task.async if you don't plan to Task.await
 
-Elixir Tasks are great for cheap concurrency and parallelizing bits of work, but we often see `Task.async` used incorrectly. The most important thing to realized is that the caller is linked to the task. This means that if the task crashes, the caller does as well, and vice-versa. For example, the following code is perfectly fine because we await both tasks and we expect to crash if they fail:
+Elixir Tasks are great for cheap concurrency and parallelizing bits of work, but we often see `Task.async` used incorrectly. The most important thing to realize is that the caller is linked to the task. This means that if the task crashes, the caller does as well, and vice-versa. For example, the following code is perfectly fine because we await both tasks and we expect to crash if they fail:
 
 ```elixir
 def create(conn, %{"access_code" => code}) do
