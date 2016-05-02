@@ -24,12 +24,12 @@ defmodule MyApp.PostController do
   use MyApp.Web, :controller
 
   def show(conn, %{"id" => id}) do
-    {:ok, post} <- Blog.get_post_for_user(conn.assigns.current_user, id)
+    {:ok, post} = Blog.get_post_for_user(conn.assigns.current_user, id)
     render(conn, "show.html", owner: conn.assigns.current_user, post: post)
   end
 
   def create(conn, %{"post" => post_params}) do
-    {:ok, post} <- Blog.publish_post(conn.assigns.current_user, id)
+    {:ok, post} = Blog.publish_post(conn.assigns.current_user, id)
     redirect(conn, to: user_post_path(conn, conn.assigns.current_user, post)
   end
 end
@@ -47,12 +47,12 @@ defmodule MyApp.PostController do
   end
 
   def show(conn, %{"id" => id}, current_user) do
-    {:ok, post} <- Blog.get_post_for_user(current_user, id)
+    {:ok, post} = Blog.get_post_for_user(current_user, id)
     render(conn, "show.html", owner: current_user, post: post)
   end
 
   def create(conn, %{"post" => post_params}, current_user) do
-    {:ok, post} <- Blog.publish_post(current_user, id)
+    {:ok, post} = Blog.publish_post(current_user, id)
     redirect(conn, to: user_post_path(conn, current_user, post)
   end
 end
