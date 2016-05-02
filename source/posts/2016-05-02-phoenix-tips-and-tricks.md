@@ -91,9 +91,13 @@ def create(conn, %{"post" => post_params}, current_user) do
   else
     {:error, changeset} -> render(conn, "edit.html", changeset: changeset)
     {:error, :unauthorized} ->
-      render(conn, ErrorView, :"401", message: "You are not authorized to publish posts")
+      conn
+      |> put_status(401)
+      |> render(ErrorView, :"401", message: "You are not authorized to publish posts")
     {:error, :rate_limited} ->
-      render(conn, ErrorView, :"429", message: "You have exceeded the max allowed posts for today")
+      conn
+      |> put_status(429)
+      |> render(ErrorView, :"429", message: "You have exceeded the max allowed posts for today")
   end
 end
 ```
