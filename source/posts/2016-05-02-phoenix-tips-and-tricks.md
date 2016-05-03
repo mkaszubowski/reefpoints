@@ -5,7 +5,7 @@ social: true
 author: Chris McCord
 twitter: "chris_mccord"
 github: chrismccord
-summary: "tips and tricks to keep your phoenix code clean and concise"
+summary: "Tips and tricks to keep your phoenix code clean and concise"
 published: true
 tags: elixir, phoenix
 ---
@@ -77,12 +77,12 @@ defmodule MyApp.Controller do
 end
 ```
 
-Now any controller that wants to use our modified actions can `use MyApp.Controller` on a case-by-base basis. We also made sure to make `action/2` overridable again to allow caller's downstream to customize their own behavior.
+Now any controller that wants to use our modified actions can `use MyApp.Controller` on a case-by-case basis. We also made sure to make `action/2` overridable again to allow caller's downstream to customize their own behavior.
 
 
 ### Rendering the `ErrorView` directly
 
-Most folks use their `ErrorView` to handle rendering exceptions after they are caught and translated to the propper status code, such as a `Ecto.NoResultsError` rendering the "404.html" template or a `Phoenix.ActionClauseError` rendering the "400.html" template. What many miss is the fact that the `ErrorView` is just like any other view. It can and should be called directly to render responses for your error cases rather than relying on exceptions for all error possibilities. For example, imagine handling the error cases for our `PostController` in the previous example:
+Most folks use their `ErrorView` to handle rendering exceptions after they are caught and translated to the proper status code, such as a `Ecto.NoResultsError` rendering the "404.html" template or a `Phoenix.ActionClauseError` rendering the "400.html" template. What many miss is the fact that the `ErrorView` is just like any other view. It can and should be called directly to render responses for your error cases rather than relying on exceptions for all error possibilities. For example, imagine handling the error cases for our `PostController` in the previous example:
 
 ```elixir
 def create(conn, %{"post" => post_params}, current_user) do
