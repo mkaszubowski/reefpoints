@@ -89,7 +89,7 @@ def create(conn, %{"post" => post_params}, current_user) do
   with {:ok, post} <- Blog.publish_post(current_user, post_params) do
     redirect(conn, to: user_post_path(conn, current_user, post)
   else
-    {:error, changeset} -> render(conn, "edit.html", changeset: changeset)
+    {:error, %Ecto.Changeset{} = changeset} -> render(conn, "edit.html", changeset: changeset)
     {:error, :unauthorized} ->
       conn
       |> put_status(401)
@@ -133,7 +133,7 @@ def delete(conn, _, current_user) do
 end
 ```
 
-In this case, we want to notify our staff about an account cancellation, say by sending an email, but we don't want the client to wait on this particular work. It might feel natural to use `Task.async` here, but since we aren't awaiting the result and the client isn't concerned about its success, we have an issue. First, we are linked to the caller, so any abnormal exit on either side will crash the other. The client could get a 500 error after their account has been canceled and not be sure if their operation was successful. Likewise, our staff notice could be brought down by an error when sending the response, preventing our staff being alerted of the completed event. We can use `Task.Supervisor` and its `async_no_link` to achieve an offloaded process that is isolated under its own supervision tree.
+In this case, we want to notify our staff about an account cancellation, say by sending an email, but we don't want the client to wait on this particular work. It might feel natural to use `Task.async` here, but since we aren't awaiting the result and the client isn't concerned about its success, we have an issue. First, we are linked to the caller, so any abnormal exit on either side will crash the other. The client could get a 500 error after their account has been canceled and not be sure if their operation was successful. Likewise, our staff notice could be brought down by an error when sending the response, preventing our staff being alerted of the completed event. We can use `Task.Supervisor` and its `async_nolink` to achieve an offloaded process that is isolated under its own supervision tree.
 
 First, we'd need to add our own `Task.Supervisor`, to our supervision tree, in `lib/my_app.ex`:
 
@@ -144,12 +144,12 @@ children = [
 ]
 ```
 
-Next, we can now offload the task to our supervisor. We'll also use the `async_no_link` function to isolate the task from the caller:
+Next, we can now offload the task to our supervisor. We'll also use the `async_nolink` function to isolate the task from the caller:
 
 ```elixir
 def delete(conn, _, current_user) do
   {:ok, user} = Accounts.cancel_account(current_user)
-  Task.Supervisor.async_no_link(MyApp.TaskSupervisor, fn ->
+  Task.Supervisor.async_nolink(MyApp.TaskSupervisor, fn ->
     Audits.alert_cancellation_notice(user) end)
   end)
 
