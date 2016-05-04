@@ -50,7 +50,7 @@ using rope to solve a spatial design challenge?
 ![Rope](https://i.imgur.com/fkJyHS4.jpg)
 
 Rope is potent with creative potential because of its malleability. Its ability to structure complex forms and functions 
-was something we believed we could take advantage of. After all, it’s been used since...forever, and in a seemingly infinite 
+was something we believed we could use to our advantage. After all, it’s been used since...forever, and in a seemingly infinite 
 amount of scenarios. These characteristics proved beneficial to solving the challenge we were faced with.
 
 ## Why?
