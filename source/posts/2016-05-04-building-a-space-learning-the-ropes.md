@@ -20,8 +20,6 @@ Previously when someone entered our office, they’d be greeted at the door and 
 the immediate seating area was this curved wall. They’d step over it. They’d step around it. They’d even ask us whether to 
 step around it! It was a surprisingly large interruption in the initial experience of visiting the office.
 
-![Floor plan](https://i.imgur.com/cn22Ez8.jpg)
-
 When building a work space it’s important to ensure the space not only benefits the employee but also prospective clients 
 (or really anyone visiting the office). When a guest visits a space there are a lot of moments that leave a lasting 
 impression. Having a sign that directs guests where to go impacts a guest’s experience. Greeting guests with a smile as 
