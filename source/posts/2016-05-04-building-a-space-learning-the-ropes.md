@@ -6,7 +6,7 @@ twitter: 'pbranigan'
 social: true
 summary: 'A short series about transforming the DockYard workspace.'
 published: true
-tags: design, design process
+tags: design, design process, office
 ---
 
 DockYard has been growing over the past couple years. In 2015 we relocated to a larger space which resulted in a lot of 
