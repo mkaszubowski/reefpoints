@@ -16,7 +16,7 @@ physical work environment.
 
 ## Reception wall
 
-Adjacent to our lobby (divided by our newly built rope wall) there is our reception area. The previous tenant painted the 
+Adjacent to our lobby (divided by our newly built [rope wall](https://dockyard.com/blog/2016/05/04/building-a-space-learning-the-ropes "rope wall") there is our reception area. The previous tenant painted the 
 reception wall a vibrant red. It provided a brilliance to the environment that was visually stimulating and aligned with 
 their brand colors. However, the walls were painted white prior to our move in, leaving us with a space that lacked character. 
 Though white walls made the space feel “clean,” it also made it seem unfinished. The vision for our lobby area already relied 
