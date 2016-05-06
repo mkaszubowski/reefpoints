@@ -78,7 +78,7 @@ whether it be a career or a project.
 
 Also, like the rope wall, it subtly hints at a nautical theme. Though the nautical theme isn’t meant to be at the forefront 
 of the entire office experience, it can be delightful to encounter our name, “DockYard,” upon entry and then extend the 
-introduction with a corresponding statement such as “chart a course”. The name and the statement calmly connect the the 
+introduction with a corresponding statement such as “chart a course”. The name and the statement calmly connect the 
 entire entry experience, which may help in a guest’s ability to recall our brand name. 
 
 ## How?
