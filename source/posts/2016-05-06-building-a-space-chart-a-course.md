@@ -4,7 +4,7 @@ title: "Building a Space: Chart a Course"
 author: 'Patrick Branigan'
 twitter: 'pbranigan'
 social: true
-summary: 'A short series about transforming the DockYard work space.'
+summary: 'A short series about transforming the DockYard workspace.'
 published: true
 tags: design, design process, office
 ---
