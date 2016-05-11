@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Transitioning into Tech: From Googling “What is Ember.js?”  to Interning at a Software Consultancy"
+title: "Transitioning into Tech: From Googling “What is Ember.js?” to Interning at a Software Consultancy"
 social: true
 author: Maggie Gigler
 twitter: "readysetgigs"
