@@ -7,7 +7,7 @@ twitter: "martndemus"
 github: martndemus
 summary: "A walkthrough of one of the patterns used in Ember Composable Helpers"
 published: true
-tags: Ember, JavaScript
+tags: Ember, JavaScript, Engineering
 ---
 
 Co-creator of Ember Composable Helpers [Lauren Tan][lauren] recently wrote about the [what, why and how][blogpost-lauren] of Ember Composable Helpers.
@@ -49,7 +49,7 @@ export default Helper.extend({
 ```
 
 Let's start with the `compute` function on lines 12-17. 
-It expects a `targetObject` and `propertyPath` param, which stand for the object you wan't to get the given property from.
+It expects a `targetObject` and `propertyPath` param, which stands for the object you wan't to get the given property from.
 These params are set as properties on the helper itself each time `compute` is called. Finally the `compute` function returns the `content` property. This will be the result of getting the `propertyPath` from the `targetObject`.
 
 ## Why not just return the given property from the target object?
