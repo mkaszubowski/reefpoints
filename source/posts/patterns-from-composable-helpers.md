@@ -5,7 +5,7 @@ social: true
 author: Marten Schilstra
 twitter: "martndemus"
 github: martndemus
-summary: "A walkthrough of the patterns used in Ember Composable Helpers"
+summary: "A walkthrough of one of the patterns used in Ember Composable Helpers"
 published: true
 tags: Ember, JavaScript
 ---
