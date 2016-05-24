@@ -20,11 +20,12 @@ appropriate template to render. A helpful helper that became available pre-Ember
 2.0 is the `{{component}}`. With its help, we can clean up our template logic.
 
 A distinguishing factor between the `{{component}}` helper and the traditional
-component invocation is that the helper expects the component name as the second
-parameter, and will dynamically render out the component by that name. An
-arbitrary number of parameters may follow the component name.
+component invocation is that the helper expects the component name as the first
+parameter following the helper name, and will dynamically render out the component
+specified by that parameter. An arbitrary number of parameters may follow the
+component name; these are what the rendered component expects.
 
-`{{component myComponentName param1=param1 param2=param2 ...}}`
+`{{component myComponentName param2=param2 param3=param3 ...}}`
 
 Suppose we have a `Food` model. And each `Food` model instance has a `taste`
 attribute. We want to render a certain template depending on the string value of
