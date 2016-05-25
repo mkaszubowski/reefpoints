@@ -33,7 +33,7 @@ If team communication style stays the same as a team grows, eventually it become
 
 ## On larger teams, unmanaged communication becomes overwhelming
 
-![A very large team needs even more!](https://i.imgur.com/zYEjpVt.jpg)
+![A very large team needs even more!](https://i.imgur.com/hSl0xUo.jpg)
 
 
 If everyone keeps telling everyone everything, without a defined structure to contain those conversations, the amount of communications will grow (nearly) exponentially faster, even as team size grows in a linear fashion.
