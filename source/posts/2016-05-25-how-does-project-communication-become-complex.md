@@ -33,7 +33,7 @@ If team communication style stays the same as a team grows, eventually it become
 
 ## On larger teams, unmanaged communication becomes overwhelming
 
-![A very large team needs even more!](https://i.imgur.com/FpVyvj5.jpg)
+![A very large team needs even more!](https://i.imgur.com/zYEjpVt.jpg)
 
 
 If everyone keeps telling everyone everything, without a defined structure to contain those conversations, the amount of communications will grow (nearly) exponentially faster, even as team size grows in a linear fashion.
@@ -42,7 +42,7 @@ Remember that math problem from school, where you’d count the number of combin
 
 ## Manage the conversations on larger teams. Because you have to.
 
-![layered communication](https://i.imgur.com/oEGMWPu.jpg)
+![layered communication](https://i.imgur.com/emvoO7J.jpg)
 
 The answer to the math problem is structure. As team sizes grow, managers or team leaders emerge who become responsible for keeping on top of communications within a smaller team (think - the drawing of four people above) as well as for relaying that information to other team leaders. 
 
