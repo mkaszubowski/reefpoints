@@ -100,6 +100,7 @@ import Ember from 'ember';
 const { 
   Helper, 
   get,
+  set,
   isEmpty,
   observer,
   defineProperty,
