@@ -16,7 +16,7 @@ Now I'd like to talk about one of the patterns we have used to make Ember Compos
 ## The fundament of the array helpers is the get helper
 
 Most of the array helpers are built upon the implementation of the [get helper][get-helper]. 
-Let's take a closer look at a simplified version of the get helper:
+Let's take a closer look at a simplified version of the `get` helper:
 
 ```js
 import Ember from 'ember';
@@ -24,6 +24,7 @@ import Ember from 'ember';
 const { 
   Helper, 
   get,
+  set,
   observer,
   defineProperty,
   computed: { oneWay }
@@ -48,8 +49,8 @@ export default Helper.extend({
 });
 ```
 
-Let's start with the `compute` function on lines 12-17. 
-It expects a `targetObject` and `propertyPath` param, which stands for the object you wan't to get the given property from.
+Let's start with the `compute` function on lines 13-18. 
+It expects a `targetObject` and `propertyPath` param, which stands for the object you want to get the given property from.
 These params are set as properties on the helper itself each time `compute` is called. Finally the `compute` function returns the `content` property. This will be the result of getting the `propertyPath` from the `targetObject`.
 
 ## Why not just return the given property from the target object?
@@ -70,7 +71,7 @@ export default helper(getHelper);
 
 ## Solution: Observers
 
-Yes you heard it right, observers are a perfect candidate to solve the problem that our helper won't recompute when we want it to. So lets take a look at the `propertyPathDidChange` and `contentDidChange` observers.
+Yes you heard it right, observers are a perfect candidate to solve the problem that our helper won't recompute when we want it to. So let's take a look at the `propertyPathDidChange` and `contentDidChange` observers.
 
 ```js
 propertyPathDidChange: observer('propertyPath', function() {
@@ -79,7 +80,7 @@ propertyPathDidChange: observer('propertyPath', function() {
 })
 ```
 
-Let me explain what happens with this observer. On the first line we define an observer that will be triggered every time `propertyPath` gets updated. In the function body we get the value of `propertyPath` and use it to define a new computed property _at runtime_, we do that using [`defineProperty`][defineproperty]. This means that every time the `propertyPath`'s value changes, the `content` computed property gets redefined to point towards the correct path on the target object.
+Let me explain what happens with this observer. On the first line we define an observer that will be triggered every time `propertyPath` gets updated. In the function body we get the value of `propertyPath` and use it to define a new computed property _at runtime_. We do that using [`defineProperty`][defineproperty]. This means that every time the `propertyPath`'s value changes, the `content` computed property gets redefined to point towards the correct path on the target object.
 
 ```js
 contentDidChange: observer('content', function() {
@@ -91,7 +92,7 @@ Then there is the `contentDidChange` observer. This one watches for changes of t
 
 ## Putting it all together to create the map-by helper
 
-Now that we know how to build an helper that can recompute when a property that we only know of at runtime changes, it is very simple to create other similar helpers upon this pattern. I'll leave you with the `map-by` helper, which doesn't look that different from the `get` helper i've shown you.
+Now that we know how to build a helper that can recompute when a property that we only know of at runtime changes, it is very simple to create other similar helpers upon this pattern. I'll leave you with the `map-by` helper, which doesn't look that different from the `get` helper I've shown you.
 
 ```js
 import Ember from 'ember';
