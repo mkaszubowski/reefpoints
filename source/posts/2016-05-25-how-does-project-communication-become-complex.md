@@ -10,7 +10,7 @@ tags: design, business, observations, product management, team
 ---
 
 
-Projects of larger scale or longer duration often involves a large design team. We typically keep everyone informed and share information efficiently on teams roughly the size of a large family. But we don't have that intuitive understanding of how teams work once they get much larger than that. 
+Projects of larger scale or longer duration often involve a large design team. We typically keep everyone informed and share information efficiently on teams roughly the size of a large family. But we don't have that intuitive understanding of how teams work once they get much larger than that. 
 
 As I’ve gotten the chance to look into how larger teams work on projects, I realized that they have the potential to get too complex for one person to understand, and therefore communication requires careful attention and structure.
 
@@ -48,7 +48,7 @@ The answer to the math problem is structure. As team sizes grow, managers or tea
 
 ## Reinventing the wheel?
 
-The need for management is not a new concept. As I was discovering it for myself, I was surely reinventing the wheel. Colleagues advised that the number of connections between nodes is described by [https://en.wikipedia.org/wiki/Metcalfe%27s_law](Metclafe’s Law).
+The need for management is not a new concept. As I was discovering it for myself, I was surely reinventing the wheel. Colleagues advised that the number of connections between nodes is described by [Metclafe’s Law](https://en.wikipedia.org/wiki/Metcalfe%27s_law).
 
   
 ![Metclafe’s Law](https://i.imgur.com/Iv59ich.png)
@@ -57,7 +57,7 @@ The need for management is not a new concept. As I was discovering it for myself
 
 
 
-The information exchange in a group could be managed by breaking down & [https://en.wikipedia.org/wiki/Stakeholder_management](managing different stakeholders) depending on their influence (power) and influence level. 
+The information exchange in a group could be managed by breaking down & [managing different stakeholders](https://en.wikipedia.org/wiki/Stakeholder_management) depending on their influence (power) and influence level. 
 
 
 
@@ -65,6 +65,6 @@ The information exchange in a group could be managed by breaking down & [https:/
 
 
 
-I also learned that [https://blog.bufferapp.com/small-teams-why-startups-often-win-against-google-and-facebook-the-science-behind-why-smaller-teams-get-more-done](coordination cost) becomes one of the factors in determining the productivity of a team.
+I also learned that [coordination cost](https://blog.bufferapp.com/small-teams-why-startups-often-win-against-google-and-facebook-the-science-behind-why-smaller-teams-get-more-done) becomes one of the factors in determining the productivity of a team.
 
 All these are great ways to look at getting things done with more perspective than I would have had before I took on a management role. Re-discovering some of these principles for myself, and learning from colleagues has been a rewarding process - and I can’t wait to see what’s next!
