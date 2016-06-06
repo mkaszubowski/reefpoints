@@ -25,13 +25,13 @@ Let’s see what happens as the number of people on a team grows. We’ll assume
 With a team size of two, everyone’s ideas and questions can be exchanged freely, and all team members are on the same page as these conversations happen.
 
 
-## With more people on a team, communication adds up
+## With more people on a team, communication adds up.
 
 ![larger team needs more communication](https://i.imgur.com/JaKGFon.jpg)
 
 If team communication style stays the same as a team grows, eventually it becomes more and more difficult for everyone to tell everyone else everything. At first it may look like the complexity of communication grows in a linear way, along with team size. But the pattern soon changes. 
 
-## On larger teams, unmanaged communication becomes overwhelming
+## On larger teams, unmanaged communication becomes overwhelming.
 
 ![A very large team needs even more!](https://i.imgur.com/hSl0xUo.jpg)
 
