@@ -40,16 +40,16 @@ The ability to have multiple CSS files but only reference one CSS file in our HT
 
 Modular CSS file structure:
 
-```css
+```
 styles/
-    modules/
-        header.css
-        footer.css
-        nav.css
-    base.css
-    load.css
-    layout.css
-    type.css
+  modules/
+    header.css
+    footer.css
+    nav.css
+  base.css
+  load.css
+  layout.css
+  type.css
 ```
 Using this CSS architecture we can now add all of those CSS files into one central CSS file. Our CSS file with `@imports` to the other CSS files could look like the following:
 
@@ -100,7 +100,9 @@ Here’s a quick example of how to use variables:
 In other CSS files, you can just use the variable name in place of the color code.
 
 ```css
-color: var(--green);
+.text {
+  color: var(--green);
+}
 ```
 The output of this will be the rgb color code. This is simple but allows us to organize colors and other variables.
 
@@ -176,13 +178,17 @@ Input:
 Any CSS file within the same root folder:
 
 ```css
-font-size: calc(var(--font-size) * 2);
+.text {
+  font-size: calc(var(--font-size) * 2);
+}
 ```
 
 Output:
 
 ```css
-font-size: 36px;
+.text {
+  font-size: 36px;
+}
 ```
 
 # 5. postcss-svg-fragments
@@ -191,12 +197,12 @@ A downside of using the [symbol](https://css-tricks.com/svg-symbol-good-choice-i
 
 Without this plugin, we would need to have individual SVG files for background-images in CSS, and the browser would have to pull multiple SVG files when loading a page. The plugin postcss-svg-fragments solves this by doing what its name implies it adds SVG fragments into CSS.
 
-We take all our SVG files and add them to [icomoon.io](https://icomoon.io/app/#/), generate a new SVG that uses `` with a unique `id`. When we add the new SVG code to our `defs.svg`.
+We take all our SVG files and add them to [icomoon.io](https://icomoon.io/app/#/), generate a new SVG with a `<use>` that has an unique `id`. Then we add the new SVG code to our `defs.svg`.
 
 Input:
 
 ```css
-background-patter {
+.background-patter {
   background-image: url(defs.svg#pattern);
   fill: blue;
   stroke: black;
