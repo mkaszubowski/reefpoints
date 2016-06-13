@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "narwin-pack a PostCSS package"
+title: "Our PostCSS Package: narwin-pack"
 social: true
 author: Cory Tanner
 twitter: "ctannerweb"
-summary: "After DockYard’s recent transition to PostCSS, we realized that we needed a bit more plugin organization. So we created narwin-pack. Here’s an overview of the plugins that make up narwin-pack and why our UXD team chose each PostCSS plugin."
+summary: "After DockYard’s recent transition to PostCSS, we realized that we needed better plugin organization. So we created narwin-pack. Here’s an overview of the plugins that make up narwin-pack and why our UXD team chose each PostCSS plugin."
 published: true
 tags: PostCSS, CSS
 ---
