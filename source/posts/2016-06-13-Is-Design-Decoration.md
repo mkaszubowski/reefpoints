@@ -2,7 +2,7 @@
  +layout: post
  +title: "Is design really just decoration?"
  +social: true
- +author: Maria Matveeva
+ +author: Mark Kaplan
  +summary: "What exactly is design? What does it mean to take a design-first approach to solving problems?"
  +published: true
  +tags: Design Sprints, Design Process, Design Thinking, Business
