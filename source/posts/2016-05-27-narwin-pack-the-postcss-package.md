@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Narwin-Pack: A PostCSS Package for Dry and Efficient CSS"
+title: "Narwin-Pack: A PostCSS Package for DRY and Efficient CSS"
 social: true
 author: Cory Tanner
 twitter: "ctannerweb"
