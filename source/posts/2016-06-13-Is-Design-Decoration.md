@@ -1,11 +1,11 @@
 ---
- +layout: post
- +title: "Is design really just decoration?"
- +social: true
- +author: Mark Kaplan
- +summary: "What exactly is design? What does it mean to take a design-first approach to solving problems?"
- +published: true
- +tags: Design Sprints, Design Process, Design Thinking, Business
+layout: post
+title: "Is design really just decoration?"
+social: true
+author: Mark Kaplan
+summary: "What exactly is design? What does it mean to take a design-first approach to solving problems?"
+published: true
+tags: Design Sprints, Design Process, Design Thinking, Business
 ---
 
 Historically, design has been [an afterthought](https://dockyard.com/blog/2016/04/19/is-it-time-to-call-a-designer), the philosophy behind it being, “Build something, then we’ll employ design afterwards to improve its appeal.” That being said, as Mike Monteiro describes in [You’re My Favorite Client](https://abookapart.com/products/youre-my-favorite-client), bringing in designers once a product has been built is “akin to baking a cake, and *then* hiring a baker to make it taste good.”

@@ -1,11 +1,11 @@
 ---
- +layout: post
- +title: "Answering questions early with design sprints"
- +social: true
- +author: Maria Matveeva
- +summary: "Learn how using Design Sprints to validate assumptions in the initial planning stages of your project helps ensure its success."
- +published: true
- +tags: Design Sprints, Design Process, Design Thinking, Business
+layout: post
+title: "Answering questions early with design sprints"
+social: true
+author: Maria Matveeva
+summary: "Learn how using Design Sprints to validate assumptions in the initial planning stages of your project helps ensure its success."
+published: true
+tags: Design Sprints, Design Process, Design Thinking, Business
 ---
 
 
