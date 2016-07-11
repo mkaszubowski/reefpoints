@@ -25,7 +25,7 @@ engineer.
 We're beginning to explore other locations as well. As we continue to
 grow some of our existing employees have expressed interest in leaving
 Boston. Until recently we held a "Boston-only" policy but over the past six
-months we've been experimenting with changing this. Our reluctance lied
+months we've been experimenting with changing this. Our reluctance lay
 within managing client projects with remote devs properly and exporting
 our culture. Our team has been working hard to codify many of the
 aspects of what it means to work at DockYard but also work with
