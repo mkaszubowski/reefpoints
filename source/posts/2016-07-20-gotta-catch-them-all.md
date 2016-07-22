@@ -101,30 +101,6 @@ is built just right.
 >[_"Broken tech culture is seeing the success of Pokémon Go & attributing it to AR
 instead of a huge 25-year-old global cultural phenomenon."_](https://twitter.com/anildash/status/753261028801187840)
 
-# Chris B: I jumped on board right away
-
-The emergence of mobile maps has made getting lost today nearly impossible. Smart
-phones encourage users to become passengers, effectively turning off their
-critical observations. The result is a severe obstruction of our ability to
-generate accurate and expansive mental maps. In response to this, apps have
-popped up here and there to try to activate people's innate desire to explore.
-Examples of this are ‘drift’ web app and [urban walks app](http://urban-walks.com/#tours)
-(however, the drift app isn’t psychogeography, it’s a guided tour.) (these were
-largely inspired by Guy Debord and the Situationists International - ‘theory of
-dérive’)
-
-I got into Niantics' first attempt at an environmental app/game Ingress (better
-word for this genre?). The basic idea of the game is what drew me to it, but the
-complexity of Ingress led me to abandon the app. While Pokemon has the biggest
-community right now, Ingress’ community is very organized and established.
-
-Overall, the exploration apps I’ve seen tend to defeat the purpose of authentic
-wandering. What I like about Pokemon is the feeling that the Pokemon are randomly
-placed. This inspires users to wander in order to make new discoveries. However
-there is still a disconnect between the real environment and the one on my screen.
-Maybe when batteries start dying and people look up from their screen, they won’t
-know where they are and the real exploring will begin.
-
 # Cory T: Expert user point of view
 
 With walking everywhere and following PokemonGoHub on [Twitter](https://twitter.com/pokemongohub),
