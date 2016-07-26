@@ -28,7 +28,7 @@ cd components-ember
 bower link
 ```
 
-Now you need to do a little bit of setup in the app that you are working with. You will need to modify your `bower.json` to use `components/ember#canary` for Ember.js and then link it to the local repository you just cloned.
+Now you need to do a little bit of setup in the app that you are working with. You will need to modify your `bower.json` to use `components/ember#canary` for Ember.js and then link it to the local repository you just cloned. I recommend you do this in a seperate terminal window/tab, as you will have to go back and forth between this and the other a few times.
 
 Example `bower.json` after the change:
 ```
@@ -54,5 +54,39 @@ Now you're ready to start running `git bisect`.
 
 ### Finding the bad commit with bisect
 
-From the `components-ember` folder start with running the `git bisect start` command.
+From the `components-ember` folder start with running the `git bisect start` command, this will start your bisect session. Then run `git bisect bad HEAD` to tell the bisect session that the latest commit is a bad commit. The next step is a little bit harder, you will need to find a commit that you are sure of to be good. One trick is to go back about six weeks in the history and pick a commit, this commit will have a high chance of being good. When you have found such a commit, run `git bisect good <sha-of-good-commit>`. The response will look something like the following:
 
+```
+Bisecting: 117 revisions left to test after this (roughly 7 steps)
+[4e1224de1687a86dc83936e880104b6b1a48bbe2] Ember Bower Auto build for https://github.com/emberjs/ember.js/commits/d2b56a290a45b23a792575dfa6e3af37cf58bc79.
+```
+
+This means that there are 117 commits left that can contain the commit you are looking for, and that it will take about 7 more steps to find it.
+
+You should now notice that bisect has moved the `components-ember` repository to a different commit somewhere between your initial good and bad commits. In this case it is `4e1224de1687a86dc83936e880104b6b1a48bbe2` This is the first commit bisect has selected to test. It will wait for you to report if this commit is good or bad.
+
+Now go back to your app's folder and run your tests (`ember test` for example). If all tests pass the suggested commit must be a good commit, run `git bisect good` in the `components-ember` folder to tell the bisect process that this commit is a good commit. If the tests fail, then run `git bisect bad` to tell the bisect process that this commit is a bad one.
+
+After having specified if the commit is either good or bad bisect will respond with a similar message:
+
+```
+Bisecting: 58 revisions left to test after this (roughly 6 steps)
+[73f02564972bbd14a719f707af019d94c822939c] Ember Bower Auto build for https://github.com/emberjs/ember.js/commits/1be0354068d933065ac542f49d42d73409366a47.
+```
+
+With this step it has eliminated 59 commits, and there are only 58 commits left that can contain the commit you are looking for. It has also moved the `components-ember` repository to the next commit that it needs you to test if it's good or bad.
+
+Run your app's tests again and either run `git bisect good` or `git bisect bad` based on the results of the tests.
+
+Keep repeating this process until it reports the bad commit:
+
+```
+9f6b98391523c4be437e1f6cd1a5956e69ecc0a9 is the first bad commit
+commit 9f6b98391523c4be437e1f6cd1a5956e69ecc0a9
+Author: Tomster <tomster@emberjs.com>
+Date:   Sat Jun 11 00:03:22 2016 +0000
+
+    Ember Bower Auto build for https://github.com/emberjs/ember.js/commits/b44f9dad912a73668dda142c34a6858283003403.
+```
+
+Congratulations! You have found the bad commit that introduced the bug that you were looking for. In this case it's `9f6b98391523c4be437e1f6cd1a5956e69ecc0a9`, and luckily the commit message includes the commit the build is from, so you can go to the GitHub url from the commit message and see the original commit.
