@@ -23,7 +23,7 @@ To find out what commit has introduced a bug in the [Ember.js](https://github.co
 To clone and link the `component/ember` repository:
 
 ```
-git clone git@github.com:components/ember.git components-ember
+git clone git@github.com:components/ember.git components-ember -b canary
 cd components-ember
 bower link
 ```
@@ -50,8 +50,9 @@ rm -rf bower_components/ember
 bower link ember
 ```
 
-Now you're ready to start running `git bisect`
+Now you're ready to start running `git bisect`.
 
 ### Finding the bad commit with bisect
 
 From the `components-ember` folder start with running the `git bisect start` command.
+
