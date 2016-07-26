@@ -123,3 +123,11 @@ And now we can let bisect run your script on each iteration:
 ```
 git bisect run ./ember-bisect-test.sh
 ```
+
+### What have we learned?
+
+You have now learned:
+  - The basics of how `git bisect` works
+  - How to use `git bisect` with the Ember.js canary channel to track down commits that introduce regressions.
+  - How to restart the process when you mess it up.
+  - How to automate `git bisect` with a script.
