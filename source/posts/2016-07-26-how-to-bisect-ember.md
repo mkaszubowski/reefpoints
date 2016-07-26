@@ -7,10 +7,10 @@ twitter: "martndemus"
 github: martndemus
 summary: "Learn how to use Git's bisect command with Ember.js as the example"
 published: true
-tags: git, bisect, javascript, ember
+tags: git, javascript, ember
 ---
 
-I'm writing this tutorial because I ran into a problem with Ember.js the other day. The problem was that the test suite did not pass anymore on Ember.js' canary build channel, while it used to pass before. After debugging the problem I wanted to find out which commit in Ember.js did break the tests. Thanks to [Robert Jackson](https://twitter.com/rwjblue), who pointed me to a [GitHub comment](https://github.com/emberjs/ember.js/issues/13846#issuecomment-234133694), I've been able to use `git bisect` to find the commit that introduced the issue and [report](https://github.com/emberjs/ember.js/issues/13888) it.
+I'm writing this tutorial because I ran into a problem, while working on an addon, with Ember.js the other day. The problem was that the test suite did not pass anymore on Ember.js' canary build channel, while it used to pass before. After debugging the problem I wanted to find out which commit in Ember.js did break the tests. Thanks to [Robert Jackson](https://twitter.com/rwjblue), who pointed me to a [GitHub comment](https://github.com/emberjs/ember.js/issues/13846#issuecomment-234133694), I've been able to use `git bisect` to find the commit that introduced the issue and [report](https://github.com/emberjs/ember.js/issues/13888) it.
 
 ### What bisect does
 
@@ -20,7 +20,7 @@ I'm writing this tutorial because I ran into a problem with Ember.js the other d
 
 To find out what commit has introduced a bug in the [Ember.js](https://github.com/emberjs/ember.js) repository, you need to clone a different repository, that is [`components/ember`](https://github.com/components/ember), which contains the Bower builds of Ember.js. You can link this repo to your app directly and then use `git bisect` to find the first build that contains the bug. You can then cross-reference the build with the real Ember.js repo to find the actual commit that introduced the bug.
 
-To clone and link the `component/ember` repository:
+To clone and link the `components/ember` repository:
 
 ```
 git clone git@github.com:components/ember.git components-ember -b canary
@@ -127,7 +127,7 @@ git bisect run ./ember-bisect-test.sh
 ### What have we learned?
 
 You have now learned:
-  - The basics of how `git bisect` works
+  - The basics of how `git bisect` works.
   - How to use `git bisect` with the Ember.js canary channel to track down commits that introduce regressions.
   - How to restart the process when you mess it up.
   - How to automate `git bisect` with a script.
