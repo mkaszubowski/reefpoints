@@ -90,3 +90,36 @@ Date:   Sat Jun 11 00:03:22 2016 +0000
 ```
 
 Congratulations! You have found the bad commit that introduced the bug that you were looking for. In this case it's `9f6b98391523c4be437e1f6cd1a5956e69ecc0a9`, and luckily the commit message includes the commit the build is from, so you can go to the GitHub url from the commit message and see the original commit.
+
+### What if I wrongly report a commit as bad or good?
+
+Unfortunately, bisect has no undo command, so you will have to start from the top again. To do this first run `git bisect reset`, this will end your bisect session. Now you can start over by running `git bisect start` and then marking a good and bad commit, which then will start the iterative process of marking commits selected by bisect good or bad again.
+
+### Can I automate this a little bit more?
+
+Yes you can! Bisect has the command `git bisect run`, which will run a command for you on each iteration. If the command succeeds it will mark the commit as good, if the command fails it will mark the commit as bad.
+
+Let's take a look at how to do this with our example.
+
+To reliably run the tests each iteration I added the following bash script to the `components-ember` folder, I called it `ember-bisect-test.sh`:
+
+```
+#!/bin/sh
+
+cd <path/to/your/project/folder>
+rm -rf bower_components/ember
+bower link ember
+ember test
+```
+
+Mark the file as executable:
+
+```
+chmod +x ember-bisect-test.sh
+```
+
+And now we can let bisect run your script on each iteration:
+
+```
+git bisect run ./ember-bisect-test.sh
+```
