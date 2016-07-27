@@ -14,7 +14,7 @@ I'm writing this tutorial because I ran into a problem, while working on an addo
 
 ### What bisect does
 
-`git bisect` uses a [binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm) to find the first commit that introduced the bug you are looking for. You will have to tell the bisect command one commit you are sure contains the bug and one commit that you are sure of that it does not contain the bug. Bisect will then start searching, asking you if a given commit it proposes is good or bad, until it has found the commit that introduces your bug.
+`git bisect` uses the [bisection method](https://en.wikipedia.org/wiki/Bisection_method) to find the first commit that introduced the bug you are looking for. You will have to tell the bisect command one commit you are sure contains the bug and one commit that you are sure of that it does not contain the bug. Bisect will then start searching, asking you if a given commit it proposes is good or bad, until it has found the commit that introduces your bug.
 
 ### Setting up before the bisect
 
@@ -54,7 +54,7 @@ Now you're ready to start running `git bisect`.
 
 ### Finding the bad commit with bisect
 
-From the `components-ember` folder start with running the `git bisect start` command, this will start your bisect session. Then run `git bisect bad HEAD` to tell the bisect session that the latest commit is a bad commit. The next step is a little bit harder, you will need to find a commit that you are sure of to be good. One trick is to go back about six weeks in the history and pick a commit, this commit will have a high chance of being good. When you have found such a commit, run `git bisect good <sha-of-good-commit>`. The response will look something like the following:
+From the `components-ember` folder start with running the `git bisect start` command, this will start your bisect session. Then run `git bisect bad` to tell the bisect session that the current commit is a bad commit. The next step is a little bit harder, you will need to find a commit that you are sure of to be good. One trick is to go back about six weeks (about one Ember version) in the history and pick a commit, this commit will have a high chance of being good. One warning though: going back too far might cause you to find a bug that is irrelevant to your case. When you have found such a commit, run `git bisect good <sha-of-good-commit>`. The response will look something like the following:
 
 ```
 Bisecting: 117 revisions left to test after this (roughly 7 steps)
