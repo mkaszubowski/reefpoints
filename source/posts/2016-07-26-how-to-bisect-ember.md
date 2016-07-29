@@ -31,6 +31,7 @@ bower link
 Now you need to do a little bit of setup in the app that you are working with. You will need to modify your `bower.json` to use `components/ember#canary` for Ember.js and then link it to the local repository you just cloned. I recommend you do this in a seperate terminal window/tab, as you will have to go back and forth between this and the other a few times.
 
 Example `bower.json` after the change:
+
 ```
 {
   "name": "my-app",
@@ -127,6 +128,7 @@ git bisect run ./ember-bisect-test.sh
 ### What have we learned?
 
 You have now learned:
+
   - The basics of how `git bisect` works.
   - How to use `git bisect` with the Ember.js canary channel to track down commits that introduce regressions.
   - How to restart the process when you mess it up.
