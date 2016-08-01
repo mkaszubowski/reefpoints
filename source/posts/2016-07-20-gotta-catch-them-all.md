@@ -9,7 +9,7 @@ published: true
 tags: Design, Design Thinking, observations
 ---
 
-![Drowzee](http://i.imgur.com/grGuj2m.png)
+![Drowzee](http://i.imgur.com/vCbmLzz.jpg)
 
 If you haven't yet heard of Pokemon GO, you might be living under a rock. Or
 under an Onyx. Pokemon GO was released on July 7, 2016 in the United States and
